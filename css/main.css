@@ -5,35 +5,11 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 /* print */
-#feedback { 
-
-  position: relative; 
-  top: 40%; 
-  left: 52%;
-  z-index: 999;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg); 
-  -moz-transform: rotate(-90deg); 
-  -o-transform: rotate(-90deg); 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
-#feedback a { 
-  display: block; 
-  background: #f00; 
-  padding: 8px 16px;
-  color: #fff; 
-  font-family: Arial, sans-serif; 
-  font-size: 17px; 
-  font-weight: bold; 
-  text-decoration: none; 
-
-  border-left: solid 1px #333;
-  border-right: solid 1px #fff;
-}
-
-#feedback a:hover { 
-  background: #06c; 
+#feedback a{
+display:block;
+position:fixed;
+top:200px;
+left:-1px;
 }
 
 /* HTML5 DECLARATIONS */
