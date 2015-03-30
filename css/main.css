@@ -8,7 +8,7 @@
 #print { 
   position: fixed; 
   top: 40%;
-  left: 82%;  
+  left: -80px;  
   z-index: 999;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg); 
