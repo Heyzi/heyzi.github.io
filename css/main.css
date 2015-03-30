@@ -4,10 +4,9 @@
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-
+/* print */
 #feedback { 
-  height: 104px; 
-  width: 104px; 
+
   position: fixed; 
   top: 40%; 
   z-index: 999;
@@ -21,8 +20,6 @@
 #feedback a { 
   display: block; 
   background: #f00; 
-  height: 15px; 
-  width: 70px; 
   padding: 8px 16px;
   color: #fff; 
   font-family: Arial, sans-serif; 
