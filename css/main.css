@@ -6,10 +6,9 @@
 }
 /* print */
 #print { 
-  height: 104px; 
-  width: 104px; 
   position: fixed; 
-  top: 40%; 
+  top: 40%;
+  left: 82%;  
   z-index: 999;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg); 
