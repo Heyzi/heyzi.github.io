@@ -9,7 +9,7 @@
 
   position: relative; 
   top: 40%; 
-  left: 52%
+  left: 52%;
   z-index: 999;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg); 
