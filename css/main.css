@@ -7,8 +7,9 @@
 /* print */
 #feedback { 
 
-  position: fixed; 
+  position: relative; 
   top: 40%; 
+  left: 52%
   z-index: 999;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg); 
@@ -26,7 +27,7 @@
   font-size: 17px; 
   font-weight: bold; 
   text-decoration: none; 
-  border-bottom: solid 1px #333;
+
   border-left: solid 1px #333;
   border-right: solid 1px #fff;
 }
