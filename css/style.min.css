@@ -34,7 +34,7 @@ body nav.navbar-inverse {
 body nav.navbar-inverse a.navbar-brand {
     font-family: 'Open Sans', sans-serif;
     color: #EDEDED!important;
-    font-size: 27px;
+    font-size: 24px;
     letter-spacing: 2px;
 }
 body nav.navbar-inverse a.navbar-brand>span {
