@@ -252,7 +252,7 @@ body section .section-content {
 }
 #personal-info #each-holder .top-decorator {
     height: 10px;
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     margin: -10px 0 6px 0;
     -webkit-border-top-left-radius: 6px;
     -webkit-border-top-right-radius: 6px;
@@ -276,7 +276,7 @@ body section .section-content {
 }
 #personal-info #each-holder .each>.icon {
     width: 17px;
-    color: #1abc9c;
+    color: rgba(26, 188, 126, 0.81);
     overflow: hidden;
     margin: 0 auto;
 }
@@ -298,7 +298,7 @@ body section .section-content {
     text-align: center;
 }
 #letter-head {
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     width: 100%;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -417,7 +417,7 @@ body section .section-content {
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     font-size: 16px;
     width: 35px;
     height: 35px;
@@ -433,7 +433,7 @@ body section .section-content {
     font-size: 13px;
 }
 #educational-attainment .section-content ul.cbp_tmtimeline>li .cbp_tmtime span:last-child, #working-experience .section-content ul.cbp_tmtimeline>li .cbp_tmtime span:last-child {
-    color: #1abc9c;
+    color: rgba(26, 188, 126, 0.81);
     font-size: 14px;
     line-height: 27px;
 }
@@ -454,7 +454,7 @@ body section .section-content {
     line-height: 19px;
     padding: 10px;
     text-align: justify;
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     color: #FFF;
     margin: 5px -10px -10px -10px;
     border-bottom-left-radius: 5px;
@@ -514,7 +514,7 @@ body section .section-content {
     border-radius: 3px;
 }
 #skills .each .base .percentage {
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     height: 21px;
     border-bottom: 3px solid #17a689;
     -webkit-border-radius: 3px;
@@ -527,7 +527,7 @@ body section .section-content {
     margin: 7px 0 19px;
 }
 #portfolio #category>div {
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     display: inline-block;
     margin: 10px 13px;
     padding: 7px 15px;
@@ -558,7 +558,7 @@ body section .section-content {
     display: block;
 }
 #portfolio .da-thumbs .mix article a.thumbnail {
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
 }
 #portfolio .da-thumbs .mix article a.thumbnail span {
     color: #FFF;
@@ -598,7 +598,7 @@ body section .section-content {
     font-size: 23px;
     margin-bottom: 10px;
     text-align: center;
-    color: #1abc9c;
+    color: rgba(26, 188, 126, 0.81);
 }
 #contact #form input[type=email], #contact #form input[type=text], #contact #form textarea {
     border: none;
@@ -627,7 +627,7 @@ body section .section-content {
     max-width: 100%}
 #contact #form button[type=submit] {
     color: #FFF;
-    background: #1abc9c;
+    background: rgba(26, 188, 126, 0.81);
     border: none;
     border-bottom: 4px solid #17a689;
     box-shadow: none;
