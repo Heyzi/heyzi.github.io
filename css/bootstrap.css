@@ -680,6 +680,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  
 }
 .container:before,
 .container:after {
@@ -743,7 +744,7 @@ pre code {
   float: left;
 }
 .col-xs-12 {
-  width: 100%;
+  width: 50%;
 }
 .col-xs-11 {
   width: 91.66666666666666%;
@@ -1056,6 +1057,8 @@ pre code {
     margin-left: 0%;
   }
 }
+.map
+{  height: 300px;}
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -1083,6 +1086,7 @@ pre code {
   }
   .col-md-6 {
     width: 50%;
+	high: 976px;;
   }
   .col-md-5 {
     width: 41.66666666666667%;
