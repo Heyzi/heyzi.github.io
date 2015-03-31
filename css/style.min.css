@@ -384,6 +384,7 @@ body section .section-content {
 }
 #working-experience {
     margin-top: 20px;
+
 }
 #educational-attainment .section-content, #working-experience .section-content {
     height: auto;
@@ -701,7 +702,7 @@ body section .section-content {
 }@media (min-width:992px) {
     #educational-attainment .section-content, #working-experience .section-content {
     height: 330px;
-    min-height: 330px;
+    min-height: 830px;
     max-height: 330px;
 }
 #working-experience {
