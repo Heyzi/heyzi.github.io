@@ -744,7 +744,7 @@ pre code {
   float: left;
 }
 .col-xs-12 {
-  width: 50%;
+  width: 100%;
 }
 .col-xs-11 {
   width: 91.66666666666666%;
@@ -922,7 +922,7 @@ pre code {
     width: 58.333333333333336%;
   }
   .col-sm-6 {
-    width: 50%;
+    width: 90%;
   }
   .col-sm-5 {
     width: 41.66666666666667%;
