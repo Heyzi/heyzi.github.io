@@ -1059,7 +1059,7 @@ pre code {
 }
 .map
 {  height: 300px;}
-@media (min-width: 992px) {
+@media (min-width: 892px) {
   .container {
     width: 970px;
   }
