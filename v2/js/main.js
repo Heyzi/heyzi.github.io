@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
 				activeCategory = $('.cd-faq-categories a[href="#'+actual.attr('id')+'"]'),
 				topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
 			
-			if ( ( topSection - 200 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {
+			if ( ( topSection - 20 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {
 				activeCategory.addClass('selected');
 			}else {
 				activeCategory.removeClass('selected');
