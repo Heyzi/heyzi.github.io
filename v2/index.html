@@ -22,10 +22,12 @@
 		<li><a href="#experience">Опыт работы</a></li>
 		<li><a href="#learning">Обучение</a></li>
 		<li><a href="#skills">Навыки</a></li>
-		<li> <div id="printbutton"> <a href="http://pingall.ru/print">Печать</a><div></li>
 		
-	</ul> <!-- cd-faq-categories -->
-
+		<div id="printbutton"><li onclick="location.href='http://pingall.ru/print';"> Печать</li><div>
+		</ul> <!-- cd-faq-categories -->
+   
+</script>
+<input type="button" onclick="frames['frame'].print()" value="printletter">
 	<div class="cd-faq-items">
 		<ul id="basics" class="cd-faq-group">
 			<li class="cd-faq-title"><h2>Контактные данные</h2></li>
@@ -112,6 +114,7 @@
 </section> <!-- cd-faq -->
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.experience.custom.min.js"></script>
+<script src="jquery.printPage.js"></script> 
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
