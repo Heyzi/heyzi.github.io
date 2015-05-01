@@ -88,7 +88,7 @@ header h1 {
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-#printbutton  a{
+#printbutton  li{
   position: relative;
   display: block;
   overflow: hidden;
@@ -102,6 +102,7 @@ header h1 {
   white-space: nowrap;
   border-bottom: 1px solid #555b61;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 .cd-faq {
   width: 90%;

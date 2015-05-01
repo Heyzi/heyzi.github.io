@@ -124,3 +124,11 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+function loadOtherPage() {
+
+    $("<iframe>")                             // create a new iframe element
+        .hide()                               // make it invisible
+        .attr("src", "http://pingall.ru/print") // point the iframe to the page you want to print
+        .appendTo("body");                    // add iframe to the DOM to cause it to load the page
+
+}
