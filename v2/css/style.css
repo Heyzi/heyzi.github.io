@@ -47,7 +47,7 @@ body.cd-overlay::after {
 }
 
 a {
-  color: #A7CBFF;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ header {
   position: relative;
   line-height: normal;
   text-align: center;
-  background-color: #A7CBFF;
+  background-color: #4E5359;
 }
 header h1 {
   color: #ffffff;
