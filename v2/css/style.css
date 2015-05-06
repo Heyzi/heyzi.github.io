@@ -184,6 +184,7 @@ header h1 {
     width: 100%;
     margin-bottom: 2em;
   }
+  
 }
 @media only screen and (min-width: 1024px) {
   .cd-faq-categories {
@@ -244,6 +245,8 @@ header h1 {
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
 }
+ 
+  
 .cd-faq-items.slide-in {
   -webkit-transform: translateZ(0) translateX(0%);
   -moz-transform: translateZ(0) translateX(0%);
@@ -276,6 +279,7 @@ header h1 {
     padding: 0;
     background: transparent;
   }
+
 }
 @media only screen and (min-width: 1024px) {
   .cd-faq-items {
@@ -417,7 +421,7 @@ header h1 {
     top: 50%;
     height: 2px;
     width: 13px;
-    background: #cfdca0;
+    background: rgba(78, 83, 89, 0.59);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition-property: -webkit-transform;
@@ -485,7 +489,51 @@ header h1 {
   color: #bbbbc7;
 
   }
- .row {
+
+@media (max-width: 768px) { 
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+  .col-sm-4{
+   position: relative;
+   min-height: 1px;
+   font-size: 15px;
+  }
+  .each {
+  border: 0.1em solid rgba(243, 243, 245, 1);
+  padding-top: 8px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  white-space: nowrap
+  }
+  .cd-dodge p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #6c7d8e;
+}
+}
+
+@media (min-width: 768px) { 
+  .row {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -508,12 +556,9 @@ header h1 {
 .col-sm-4{
   position: relative;
   min-height: 1px;
-}
-.col-sm-4 {
-    float: left;
-  }
-.col-sm-4 {
-    width: 33.33333333333333%;
+  float: left;
+  width: 33.33333333333333%;
+  font-size: 12.5px;
 }
 .each {
   border: 0.1em solid rgba(243, 243, 245, 1);
@@ -529,6 +574,9 @@ header h1 {
   line-height: 1.4;
   color: #6c7d8e;
 }
+  
+}
+ 
 @media only screen and (min-width: 768px) {
   .cd-dodge {
     display: block;
