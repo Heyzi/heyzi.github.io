@@ -364,7 +364,7 @@ header h1 {
   font-size: 12px;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #bbbbc7;
+  color: #4E5359;
 }
 .no-js .cd-faq-group {
   display: block;
@@ -408,7 +408,7 @@ header h1 {
     font-size: 1.5rem;
     font-weight: 300;
     margin: 0;
-    padding: 24px 72px 24px 24px;
+    padding: 10px 72px 24px 24px;
   }
   .cd-faq-trigger::before, .cd-faq-trigger::after {
     /* arrow icon on the right */
@@ -468,11 +468,78 @@ header h1 {
   .cd-faq-content {
     display: block;
     padding: 0 24px 30px;
+	margin-top: -12px;
   }
   .cd-faq-content p {
     line-height: 1.6;
   }
   .no-js .cd-faq-content {
+    display: block;
+  }
+}
+.cd-faq-year{
+  padding: 10px 24px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #bbbbc7;
+
+  }
+ .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-sm-4{
+  position: relative;
+  min-height: 1px;
+}
+.col-sm-4 {
+    float: left;
+  }
+.col-sm-4 {
+    width: 33.33333333333333%;
+}
+.each {
+  border: 0.1em solid rgba(243, 243, 245, 1);
+  padding-top: 8px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  white-space: nowrap
+  }
+  .cd-dodge p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #6c7d8e;
+}
+@media only screen and (min-width: 768px) {
+  .cd-dodge {
+    display: block;
+    padding: 0 24px 30px;
+	margin-top: -12px;
+	text-align:  center;
+  }
+  .cd-dodge p {
+    line-height: 1.6;
+  }
+  .no-js .cd-dodge {
     display: block;
   }
 }
