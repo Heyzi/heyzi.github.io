@@ -12,7 +12,7 @@ background: #FFFFFF;
 }
 .btn-default {
   color: #333;
-  background: #red;
+  background: rgb(255, 129, 129);
   border-color: #ccc;
   background-image: none;
 }
@@ -21,7 +21,7 @@ border-bottom: 2px solid #C3BCBC;
 }
 
 @media (max-width: @screen-xs-max) { 
-.printbutton{
+.printbtn{
 visibility:hidden;
 }
 }
