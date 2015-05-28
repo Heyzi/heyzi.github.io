@@ -12,6 +12,7 @@ clear-fix::after {
 .navbar-header{
 	float: none;
 	font-size: 20px;
+	margin-right: 0px; 
 }
 
 .menu-color{
