@@ -31,12 +31,10 @@ clear-fix::after {
   margin-right: 5px;
 }
 
-.navbar{
+.marg{
 	margin-left: 0px;
 }
-.navbar-brand{
-	margin-left: 0px;
-}
+
 .navbar-spec {
   float: left;
   height: 50px;
