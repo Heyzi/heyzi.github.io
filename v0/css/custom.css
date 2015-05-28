@@ -28,9 +28,13 @@ clear-fix::after {
   background-image: none;
   float: right;
   font-family: "Open Sans", sans-serif;
+  margin-right: 5px;
 }
 
 .navbar{
+	margin-left: 0px;
+}
+.navbar-brand{
 	margin-left: 0px;
 }
 .navbar-spec {
@@ -40,7 +44,6 @@ clear-fix::after {
   font-size: 20px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
-
 }
 #content {
 	margin-top:60px;
