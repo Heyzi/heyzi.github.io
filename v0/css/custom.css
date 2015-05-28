@@ -44,7 +44,7 @@ body {
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
 }
-
+/* adaptive kostili*/ 
 @media (max-width: 480px) { 
 .navbar-brand{
 	float: left;
@@ -62,4 +62,12 @@ body {
   display:none;
   font-family: "Open Sans", sans-serif;
 }
+}
+/* for print*/ 
+
+@media print { 
+.printbtn {
+  display:none;
+}
+
 }
