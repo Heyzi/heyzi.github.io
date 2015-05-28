@@ -21,6 +21,6 @@ border-bottom: 2px solid #C3BCBC;
 
 @media screen and (max-width: 768px){ 
 .btn-default{
-visibility:hidden;
+display: none;
 }
 }
