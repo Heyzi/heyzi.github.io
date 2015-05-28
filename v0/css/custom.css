@@ -14,9 +14,10 @@ clear-fix::after {
 	font-size: 20px;
 }
 
-.menu-color {
+.menu-color{
 	background-color:white;
 }
+
 .printbtn {
   background: none;
   border-color: #ccc;
