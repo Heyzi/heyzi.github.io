@@ -20,7 +20,7 @@ body {
 	border-bottom: 2px solid #C3BCBC;
 }
 
-@media screen and (min-width: 20px) and (max-width: 768px){ 
+@media screen and (max-width: 481px) and (max-width: 768px){ 
 .btn-default{
 	display: none;
 }
