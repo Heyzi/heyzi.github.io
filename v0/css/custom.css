@@ -15,7 +15,7 @@ clear-fix::after {
 
 }
 #content {
-	padding-top:55px;
+	margin-top:55px;
 	border: 1px solid #a5d4fc;
 }
 body {
