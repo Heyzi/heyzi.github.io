@@ -65,9 +65,3 @@ body {
 }
 /* for print*/ 
 
-@media print { 
-.printbtn {
-  display:none;
-}
-
-}
