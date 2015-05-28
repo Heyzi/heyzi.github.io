@@ -18,7 +18,7 @@ clear-fix::after {
 	margin-top:55px;
 	font-family: "Open Sans", sans-serif;
 }
-#menu-color {
+.menu-color {
 	background-color:white;
 }
 .row div {
