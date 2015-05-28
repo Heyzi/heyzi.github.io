@@ -14,21 +14,8 @@ clear-fix::after {
 	font-size: 20px;
 }
 
-#content {
-	margin-top:55px;
-	font-family: "Open Sans", sans-serif;
-}
 .menu-color {
 	background-color:white;
-}
-.row div {
-	background:white;
-	height: 1000px;
-	border: 1px solid #a5d4fc;
-	font-family: "Open Sans", sans-serif;
-}
-body {
-	background: #FFFFFF;
 }
 .printbtn {
   background: none;
@@ -49,6 +36,21 @@ body {
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
 }
+#content {
+	margin-top:55px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.row div {
+	background:white;
+	height: 1000px;
+	border: 1px solid #a5d4fc;
+	font-family: "Open Sans", sans-serif;
+}
+body {
+	background: #FFFFFF;
+}
+
 /* adaptive kostili*/ 
 @media (max-width: 480px) { 
 .navbar-brand{
