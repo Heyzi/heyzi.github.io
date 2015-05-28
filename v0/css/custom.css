@@ -24,4 +24,7 @@ border-bottom: 2px solid #C3BCBC;
 .btn-default{
 visibility:hidden;
 }
+.navbar
+{
+display: none !important;}
 }
