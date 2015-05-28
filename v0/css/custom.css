@@ -21,7 +21,7 @@ clear-fix::after {
 body {
 	background: #FFFFFF;
 }
-.btn-default {
+.printbtn {
   background: none;
   border-color: #ccc;
   background-image: none;
@@ -42,8 +42,14 @@ body {
 .navbar-brand{
 	float: left;
 	height: 50px;
-	padding: 15px;
+	padding: 10px;
 	font-size: 18px;
 	line-height: 20px;
+}
+.printbtn {
+  background: none;
+  border-color: #ccc;
+  background-image: none;
+  float: right;
 }
 }
