@@ -25,9 +25,16 @@ body {
   background: none;
   border-color: #ccc;
   background-image: none;
+  float: right;
 }
 
 .navbar{
 	border-bottom: 2px solid #C3BCBC;
 }
-
+.navbar-spec {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
