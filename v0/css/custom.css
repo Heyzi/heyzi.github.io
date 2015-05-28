@@ -19,3 +19,7 @@ background: #FFFFFF;
 .navbar{
 border-bottom: 2px solid #C3BCBC;
 }
+
+@media (max-width: @screen-xs-max) { 
+
+ }
