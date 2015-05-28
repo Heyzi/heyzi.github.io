@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
 clear-fix::after {
     content: '';
     display: block;
@@ -12,11 +15,12 @@ clear-fix::after {
 	background:red;
 	height: 100px;
 	border: solid;
-
+	font-family: "Open Sans", sans-serif;
 }
 #content {
 	margin-top:55px;
 	border: 1px solid #a5d4fc;
+	font-family: "Open Sans", sans-serif;
 }
 body {
 	background: #FFFFFF;
@@ -26,6 +30,7 @@ body {
   border-color: #ccc;
   background-image: none;
   float: right;
+  font-family: "Open Sans", sans-serif;
 }
 
 .navbar{
@@ -37,6 +42,7 @@ body {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  font-family: "Open Sans", sans-serif;
 }
 @media (max-width: 480px) { 
 .navbar-brand{
@@ -45,6 +51,7 @@ body {
 	padding: 10px;
 	font-size: 18px;
 	line-height: 20px;
+	font-family: "Open Sans", sans-serif;
 }
 .printbtn {
   background: none;
@@ -52,5 +59,6 @@ body {
   background-image: none;
   float: right;
   display:none;
+  font-family: "Open Sans", sans-serif;
 }
 }
