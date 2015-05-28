@@ -10,3 +10,8 @@ border: 1px solid #a5d4fc;
 body {
 background: #f4f4f4;
 }
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
