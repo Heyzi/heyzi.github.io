@@ -37,6 +37,7 @@ clear-fix::after {
   font-size: 20px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
+  border-color: #ccc;
 }
 #content {
 	margin-top:60px;
