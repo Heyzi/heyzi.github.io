@@ -12,7 +12,10 @@ background: #f4f4f4;
 }
 .btn-default {
   color: #333;
-  background-color: #red;
+  background: #red;
   border-color: #ccc;
   background-image: none;
+}
+body nav.navbar{
+border-bottom: 5px solid #595252;
 }
