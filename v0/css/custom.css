@@ -51,5 +51,6 @@ body {
   border-color: #ccc;
   background-image: none;
   float: right;
+  display:none;
 }
 }
