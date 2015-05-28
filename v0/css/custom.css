@@ -16,6 +16,6 @@ background: #f4f4f4;
   border-color: #ccc;
   background-image: none;
 }
-body nav.navbar{
+body .navbar{
 border-bottom: 2px solid #C3BCBC;
 }
