@@ -11,8 +11,7 @@ body {
 background: #FFFFFF;
 }
 .btn-default {
-  color: #333;
-  background: rgb(255, 129, 129);
+  background: none;
   border-color: #ccc;
   background-image: none;
 }
@@ -24,7 +23,5 @@ border-bottom: 2px solid #C3BCBC;
 .btn-default{
 visibility:hidden;
 }
-.navbar
-{
-display: none !important;}
+
 }
