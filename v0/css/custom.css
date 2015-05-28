@@ -14,7 +14,7 @@ clear-fix::after {
 	font-size: 20px;
 	margin-right: 0px; 
 	background-color: rgba(248, 248, 248, 1);
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 7px;
 	border-style: solid;
 	border-color: #ccc;
