@@ -5,11 +5,11 @@ border: solid;
 
 }
 #content {
-margin-top:55px;
-border: 1px solid #a5d4fc;
+	margin-top:55px;
+	border: 1px solid #a5d4fc;
 }
 body {
-background: #FFFFFF;
+	background: #FFFFFF;
 }
 .btn-default {
   background: none;
@@ -17,11 +17,14 @@ background: #FFFFFF;
   background-image: none;
 }
 .navbar{
-border-bottom: 2px solid #C3BCBC;
+	border-bottom: 2px solid #C3BCBC;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){ 
+@media screen and (min-width: 20px) and (max-width: 768px){ 
 .btn-default{
-display: none;
+	display: none;
+}
+#content {
+	margin-top:
 }
 }
