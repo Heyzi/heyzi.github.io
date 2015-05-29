@@ -4,7 +4,7 @@
             zoom: 8,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+        var map = new google.maps.Map(document.getElementById("map_canvas1"),mapOptions);
         window.console.log("Position center: "+map.getCenter()+"\nZoom: "+map.getZoom());
         map.setZoom(12);
         map.setCenter(new google.maps.LatLng(0, 0));
