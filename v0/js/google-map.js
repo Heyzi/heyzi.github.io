@@ -5,9 +5,9 @@ function showMap() {
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
-        $('#mapmodal').on('shown.bs.modal', function () {
+        $('#myModal').on('shown.bs.modal', function () {
               google.maps.event.trigger(map, 'resize');
               map.setCenter(new google.maps.LatLng(54, -2));
             });
-        $('#mapmodal').modal("show");
+        $('#myModal').modal("show");
 }
