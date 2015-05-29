@@ -1,11 +1,9 @@
-var map;
 function initialize() {
-var mapOptions = {
-zoom: 8,
-center: new google.maps.LatLng(59.575129, 30.121597)
-};
-	map = new google.maps.Map(document.getElementById('map-canvas'),
-	mapOptions);
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("map-canvas"),mapProp);
 }
-
 google.maps.event.addDomListener(window, 'load', initialize);
