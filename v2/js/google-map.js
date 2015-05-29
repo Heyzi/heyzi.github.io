@@ -11,10 +11,7 @@ function initialize() {
       map: map,
       title: 'Hello World!'
   });
+$("#map_canvas").on("shown.bs.modal", function () {initialize();});
 }
 
-   $(document).ready(function () {
-        $('#map_canvas').on('shown', function () {
-            renderMap();
-        });
-    })
+   
