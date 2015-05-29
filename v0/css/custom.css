@@ -20,10 +20,6 @@ clear-fix::after {
 	border-color: #ccc;
 }
 
-.menu-color{
-	background-color:white;
-}
-
 .printbtn {
   background: none;
   border-color: #ccc;
