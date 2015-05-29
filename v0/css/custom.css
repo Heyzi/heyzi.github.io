@@ -109,6 +109,7 @@ body {
     padding-top: 7px;
     padding-bottom: 7px;
 	border-color: #ccc;
+	text-align: center;
 }
 #personal-info #each-holder .each:first-child {
     border-top: none;
