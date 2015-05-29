@@ -105,54 +105,7 @@ body {
 	  border-color: red;
 	  height: 100%;
  }
- .popup{
-  background:white;
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  z-index:101;
-  width:500px; /*Change your width here*/
-  height:200px; /*Change your height here*/
-  margin:auto;
-}
-/* Responsive Popup */
-@media(max-width:768px){
-  .popup{
-    width:90%;
-    margin:auto 5%;
-  }
-}
 
-.popup{
-  background:white;
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  z-index:101;
-  width:500px; /*Change your width here*/
-  height:200px; /*Change your height here*/
-  margin:auto;
-}
-/* Responsive Popup */
-@media(max-width:768px){
-  .popup{
-    width:90%;
-    margin:auto 5%;
-  }
-}
-
-.popup-closer:hover {
-  background-color: #eee;
-}
-
-.popup-checkbox:checked + .popup {
-  opacity: 1;
-  display: block;
-}
 			
 @media (max-width: 480px) { 
 .navbar-brand{
