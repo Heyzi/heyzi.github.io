@@ -37,6 +37,8 @@
 	<script src="js/google-map.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
 
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -105,29 +107,28 @@
 							</div>
 					<div class="MainContent col-xs-8 col-sm-8 col-md-5 col-lg-5">
 					  <!--Body content-->
-					 <!-- Button HTML (to Trigger Modal) -->
-						<a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Launch Demo Modal</a>
-						
-						<!-- Modal HTML -->
-						<div id="myModal" class="modal fade">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-										<h4 class="modal-title">Confirmation</h4>
-									</div>
-									<div class="modal-body">
-										<p>Do you want to save changes you made to document before closing?</p>
-										<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										<button type="button" class="btn btn-primary">Save changes</button>
+						 <!-- Button HTML (to Trigger Modal) -->
+							<a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">open_map</a>
+							
+							<!-- Modal HTML -->
+							<div id="myModal" class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Confirmation</h4>
+										</div>
+										<div class="modal-body">
+											<p>Do you want to save changes you made to document before closing?</p>
+											<div id="map" class="col-xs-12 col-sm-6"></div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Я понял,где это :)</button>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-										</div>
+					</div>
 					<div class="MainContent col-xs-12 col-sm-6 col-md-5 col-lg-5">
 					  <!--Body content-->
 					</div>
