@@ -34,6 +34,11 @@ clear-fix::after {
 	font-family: "Open Sans", sans-serif;
 }
 
+.marg1{
+	margin-right: -20px;
+	font-family: "Open Sans", sans-serif;
+}
+
 .navbar-spec {
   float: left;
   height: 50px;
