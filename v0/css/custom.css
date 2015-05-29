@@ -74,21 +74,8 @@ body {
     border-radius: 6px;
     border: 1px solid rgb(248, 248, 248);
 	text-align: center;
-}
-#personal-info #each-holder>div:nth-child(2) {
-    /* border-top: none!important; */
-    /* padding-top: 3px; */
-}
-#personal-info #each-holder .each {
-    border: 1px solid rgb(248, 248, 248);
-    padding-top: 7px;
-    padding-bottom: 7px;
-	border-color: #ccc;
-	text-align: center;
-}
-
-#personal-info #each-holder  {
-    width: 17px;
+	font-family: "Open Sans", sans-serif;
+	min-width: 120px;
     color: rgba(26, 188, 126, 0.81);
     overflow: hidden;
     margin: 0 auto;
@@ -99,6 +86,14 @@ body {
     margin: 0 2px;
     margin-left: -15px;
 }
+#personal-info #each-holder .each {
+    border: 1px solid rgb(248, 248, 248);
+    padding-top: 7px;
+    padding-bottom: 7px;
+	border-color: #ccc;
+	text-align: center;
+}
+
 
 
 /* adaptive kostili*/ 
