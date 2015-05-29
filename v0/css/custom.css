@@ -117,7 +117,22 @@ body {
     border-bottom: none;
     padding-bottom: 8px;
 }
-
+#personal-info #each-holder .each>.icon {
+    width: 17px;
+    color: rgba(26, 188, 126, 0.81);
+    overflow: hidden;
+    margin: 0 auto;
+}
+#personal-info #each-holder .each>.icon>.icon {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    margin: 0 2px;
+}
+#personal-info #each-holder .each:hover>.icon>.icon:nth-child(1) {
+    margin-left: -15px;
+}
 
 
 /* adaptive kostili*/ 
