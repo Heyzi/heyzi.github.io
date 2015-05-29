@@ -1,19 +1,45 @@
-function initialize() {
-  var myLatlng = new google.maps.LatLng(59.575129, 30.121597);
-  var mapOptions = {
-    zoom: 7,
-    center: myLatlng
-  }
-  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+var map;        
+            var myCenter=new google.maps.LatLng(53, -1.33);
+var marker=new google.maps.Marker({
+    position:myCenter
+});
 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
-  });
+function initialize() {
+  var mapProp = {
+      center:myCenter,
+      zoom: 14,
+      draggable: false,
+      scrollwheel: false,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  map=new google.maps.Map(document.getElementById("map_canvas"),mapProp);
+  marker.setMap(map);
+    
+  google.maps.event.addListener(marker, 'click', function() {
+      
+    infowindow.setContent(contentString);
+    infowindow.open(map, marker);
+    
+  }); 
+};
+google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, "resize", resizingMap());
+
+$('#map_canvas').on('show.bs.modal', function() {
+   //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
+   resizeMap();
+})
+
+function resizeMap() {
+   if(typeof map =="undefined") return;
+   setTimeout( function(){resizingMap();} , 400);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-$('#myModal').on('shown', function () {
-    google.maps.event.trigger(map, "resize");
-});
+function resizingMap() {
+   if(typeof map =="undefined") return;
+   var center = map.getCenter();
+   google.maps.event.trigger(map, "resize");
+   map.setCenter(center); 
+}
