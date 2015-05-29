@@ -43,7 +43,6 @@ clear-fix::after {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 20px;
   line-height: 20px;
   font-family: "Open Sans", sans-serif;
 }
@@ -74,8 +73,6 @@ body {
 	background: none;
 }
 
-printbtn btn btn-default navbar-btn hidden-print
-
 #contactf {
     margin-top: 29px;
     background: white;
@@ -101,37 +98,10 @@ printbtn btn btn-default navbar-btn hidden-print
   min-width: 125px;
  }
 
-/* 
-#personal-info #each-holder {
-    margin-top: 29px;
-    background: white;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid rgb(248, 248, 248);
-	text-align: center;
-	font-family: "Open Sans", sans-serif;
-
-	min-width: 120px;
-    overflow: hidden;
-}
-#personal-info #each-holder .each {
-    border: 1px solid rgb(248, 248, 248);
-    padding-top: 7px;
-    padding-bottom: 7px;
-	border-color: #ccc;
-	text-align: center;
-	
-}
-*/
-
-
-/* adaptive kostili*/ 
 @media (max-width: 480px) { 
 .navbar-brand{
 	float: left;
 	height: 50px;
-	padding: 10px;
-	font-size: 18px;
 	line-height: 20px;
 	font-family: "Open Sans", sans-serif;
 	margin-left: 0px;
@@ -145,5 +115,6 @@ printbtn btn btn-default navbar-btn hidden-print
   font-family: "Open Sans", sans-serif;
 }
 }
-/* for print*/ 
+
+
 
