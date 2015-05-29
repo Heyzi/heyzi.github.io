@@ -12,8 +12,12 @@ function initialize() {
       title: 'Hello World!'
   });
 }
-$('#mymodal').on('shown', function () {
+
+google.maps.event.addDomListener(window, 'load', initialize);
+   $('#myModal').on('shown.bs.modal', function () {
+        initializeMap();
+    });
+	$('#mymodal').on('shown', function () {
   google.maps.event.trigger(map, 'resize');
   map.setCenter(new google.maps.LatLng(42.7369792, -84.48386540000001));
 });
-google.maps.event.addDomListener(window, 'load', initialize);
