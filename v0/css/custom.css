@@ -104,8 +104,15 @@ body {
 	  border-color: red;
 	  height: 100%;
  }
+#dialog{
+display: none;
+}
+	
+#dvmap	{
+height: 380px; 
+width: 580px;
+}
 
-			
 @media (max-width: 480px) { 
 .navbar-brand{
 	float: left;
