@@ -130,6 +130,7 @@ html, body, #map_canvas {
 }
 #map_canvas {
     position: relative;
+	height:100px;
 }
-#map_canvas_container {position: relative;}
+
 
