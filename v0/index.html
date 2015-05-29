@@ -1,6 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<div class="container">
+
+      <h1>Одна карта Google Map в Bootstrap Modal</h1>
+      <p>Нажмите на кнопку в низу</p>
+
+      <!-- Кнопка -->
+      <p><a href="#myModal" role="button" data-toggle="modal" class="btn btn-primary">Показать</a></p>  
+
+       <!-- Модальное окно -->
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3 id="myModalLabel">Нижегородский театр «Комедія»</h3>
+    </div>
+    <div class="modal-body">
+      <div id="mapcanvas"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>      
+    </div>
+  </div>
+
+    </div> <!-- /container -->
+    
+ <script type="text/javascript">
+     myLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
+     centerLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
+
+      //start of modal google map
+      $("#myModal").modal({
+          show: false
+      }).on("shown", function()
+      {
+          var map_options = {
+            zoom: 17,
+            mapTypeControl: false,
+            center:centerLatlng,
+            panControl:false,
+            rotateControl:false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+
+        var map = new google.maps.Map(document.getElementById("mapcanvas"), map_options);
+
+         var contentString = '<div id="mapInfo">'+
+            '<p><strong>Нижегородский театр «Комедія»</strong><br>'+
+            'г.Нижний Новгород, ул. Грузинская, д. 23</p>'+
+            '<a href="http://comedia.nnov.ru/" target="_blank">Перейти на сайт</a>'+
+            '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Нижегородский театр «Комедія»",
+                  maxWidth: 200,
+                  maxHeight: 200
+          });
+          
+          google.maps.event.addListener(marker, 'click', function() {
+             infowindow.open(map,marker);
+          });
+          infowindow.open(map,marker);
+      });
+      //end of modal google map
+    </script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -123,75 +193,6 @@
 		<div class="clearfix"></div>
 		
 
-<div class="container">
-
-      <h1>Одна карта Google Map в Bootstrap Modal</h1>
-      <p>Нажмите на кнопку в низу</p>
-
-      <!-- Кнопка -->
-      <p><a href="#myModal" role="button" data-toggle="modal" class="btn btn-primary">Показать</a></p>  
-
-       <!-- Модальное окно -->
-  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h3 id="myModalLabel">Нижегородский театр «Комедія»</h3>
-    </div>
-    <div class="modal-body">
-      <div id="mapcanvas"></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>      
-    </div>
-  </div>
-
-    </div> <!-- /container -->
-    
- <script type="text/javascript">
-     myLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
-     centerLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
-
-      //start of modal google map
-      $("#myModal").modal({
-          show: false
-      }).on("shown", function()
-      {
-          var map_options = {
-            zoom: 17,
-            mapTypeControl: false,
-            center:centerLatlng,
-            panControl:false,
-            rotateControl:false,
-            streetViewControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-
-        var map = new google.maps.Map(document.getElementById("mapcanvas"), map_options);
-
-         var contentString = '<div id="mapInfo">'+
-            '<p><strong>Нижегородский театр «Комедія»</strong><br>'+
-            'г.Нижний Новгород, ул. Грузинская, д. 23</p>'+
-            '<a href="http://comedia.nnov.ru/" target="_blank">Перейти на сайт</a>'+
-            '</div>';
-
-          var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
-          
-          var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title:"Нижегородский театр «Комедія»",
-                  maxWidth: 200,
-                  maxHeight: 200
-          });
-          
-          google.maps.event.addListener(marker, 'click', function() {
-             infowindow.open(map,marker);
-          });
-          infowindow.open(map,marker);
-      });
-      //end of modal google map
-    </script>  
+ 
 </body>
 </html>
