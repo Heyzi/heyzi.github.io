@@ -72,7 +72,7 @@ body {
     background: white;
     width: 100%;
     border-radius: 6px;
-    border: 5px solid #D6D5D5;
+    border: 1px solid rgb(248, 248, 248);
 	text-align: center;
 }
 #personal-info #each-holder>div:nth-child(2) {
