@@ -69,6 +69,10 @@ body {
   width: 100%;
   border-radius: 6px;
   border-bottom: 5px solid #D6D5D5;
+  background: white;
+  height: auto;
+  border: 1px solid #a5d4fc;
+  font-family: "Open Sans", sans-serif; 
 }
 
 /* adaptive kostili*/ 
