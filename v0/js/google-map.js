@@ -1,16 +1,11 @@
+var map;
 function initialize() {
-  var myLatlng = new google.maps.LatLng(59.575129, 30.121597);
-  var mapOptions = {
-    zoom: 7,
-    center: myLatlng
-  }
-  var map = new google.maps.Map(document.getElementById('map1'), mapOptions);
-
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
-  });
+var mapOptions = {
+zoom: 8,
+center: new google.maps.LatLng(59.575129, 30.121597)
+};
+	map = new google.maps.Map(document.getElementById('map-canvas'),
+	mapOptions);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
