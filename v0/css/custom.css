@@ -84,6 +84,15 @@ printbtn btn btn-default navbar-btn hidden-print
 	border-color: #ccc;
 	text-align: center;
 }
+.cbtn{
+  display: inherit;
+  background: none;
+  border-color: #ccc;
+  background-image: none;
+  float: right;
+  font-family: "Open Sans", sans-serif;
+  margin-right: 5px;
+ }
 
 /* 
 #personal-info #each-holder {
