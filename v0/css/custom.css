@@ -46,7 +46,7 @@ clear-fix::after {
 	font-family: "Open Sans", sans-serif;
 }
 
-.row div {
+.row {
 	background:white;
 	height: 1000px;
 	border: 1px solid #a5d4fc;
