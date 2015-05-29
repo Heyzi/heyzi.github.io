@@ -66,16 +66,90 @@ body {
 #contacts{
 	background: none;
 }
+#personal-info #social-icons {
+    margin-bottom: 18px;
+    text-align: center;
+}
+#personal-info #social-icons a {
+    color: #817070;
+}
+#personal-info #social-icons a:hover {
+    text-decoration: none;
+}
+#personal-info #social-icons a:hover span {
+    background: #3F3F3F;
+    color: #FFF;
+}
+#personal-info #social-icons a span {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    background: #FFFDFD;
+    font-size: 13px;
+    padding: 8px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin: 0 5px;
+}
 #personal-info #each-holder {
-  margin-top: 29px;
-  background: #F3F3F3;
-  width: 100%;
-  border-radius: 6px;
-  border-bottom: 5px solid #D6D5D5;
-  background: white;
-  height: auto;
-  border: 1px solid #a5d4fc;
-  font-family: "Open Sans", sans-serif; 
+    margin-top: 29px;
+    background: #F3F3F3;
+    width: 100%;
+    border-radius: 6px;
+    border-bottom: 5px solid #D6D5D5;
+}
+#personal-info #each-holder>div:nth-child(2) {
+    /* border-top: none!important; */
+    /* padding-top: 3px; */
+}
+#personal-info #each-holder .top-decorator {
+    /* height: 10px; */
+    /* background: rgba(26, 188, 126, 0.81); */
+    /* margin: -10px 0 6px 0; */
+    /* -webkit-border-top-left-radius: 6px; */
+    /* -webkit-border-top-right-radius: 6px; */
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    /* border-top-left-radius: 6px; */
+    /* border-top-right-radius: 6px; */
+}
+#personal-info #each-holder .each {
+    border-bottom: 1px solid #FFF;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+#personal-info #each-holder .each:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+#personal-info #each-holder .each:last-child {
+    border-bottom: none;
+    padding-bottom: 8px;
+}
+#personal-info #each-holder .each>.icon {
+    width: 17px;
+    color: rgba(26, 188, 126, 0.81);
+    overflow: hidden;
+    margin: 0 auto;
+}
+#personal-info #each-holder .each>.icon>.icon {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    margin: 0 2px;
+}
+#personal-info #each-holder .each:hover>.icon>.icon:nth-child(1) {
+    margin-left: -15px;
+}
+#personal-info #each-holder .each .info {
+    /* word-break: break-word; */
+    /* font-size: 12px; */
+    /* color: #9A9A9A; */
+    /* width: 100%; */
+    /* text-align: center; */
 }
 
 /* adaptive kostili*/ 
