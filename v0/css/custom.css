@@ -51,13 +51,17 @@ clear-fix::after {
 }
 
 .row div {
-	background:#ccc;
+	background:rgb(248, 248, 248);;
 	height: 1000px;
 	border: 1px solid #a5d4fc;
 	font-family: "Open Sans", sans-serif;
 }
 body {
 	background: #FFFFFF;
+}
+.profilepic{
+border-radius: 10px;
+max-width: 100%;
 }
 
 /* adaptive kostili*/ 
