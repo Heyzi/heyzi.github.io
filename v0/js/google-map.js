@@ -1,18 +1,18 @@
-function initialize() {
-  var myLatlng = new google.maps.LatLng(59.575129, 30.121597);
-  var mapOptions = {
-    zoom: 7,
-    center: myLatlng
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+ function initializeMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.219987, 4.396237),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+          mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(51.219987, 4.396237)
+        });
+        marker.setMap(map);
+    }
 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Hello World!'
-  });
-  google.maps.event.trigger(map, "resize");
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.trigger(map, "resize");
+    //show map on modal
+    $('#myModal').on('shown.bs.modal', function () {
+        initializeMap();
+    });
