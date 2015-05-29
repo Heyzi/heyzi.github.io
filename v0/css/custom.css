@@ -80,19 +80,13 @@ body {
     /* padding-top: 3px; */
 }
 #personal-info #each-holder .each {
-    border-bottom: 1px solid #FFF;
+    border: 1px solid rgb(248, 248, 248);
     padding-top: 7px;
     padding-bottom: 7px;
 	border-color: #ccc;
 	text-align: center;
 }
-#personal-info #each-holder .each:first-child {
-    border-top: none;
-    padding-top: 0;
-}
-#personal-info #each-holder .each:last-child {
-    border-bottom: none;
-}
+
 #personal-info #each-holder .each>.icon {
     width: 17px;
     color: rgba(26, 188, 126, 0.81);
