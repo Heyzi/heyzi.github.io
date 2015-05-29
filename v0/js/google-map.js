@@ -14,3 +14,6 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+$('#myModal').on('shown', function () {
+    google.maps.event.trigger(map, "resize");
+});
