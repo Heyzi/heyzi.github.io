@@ -63,8 +63,12 @@ body {
 .social {
   margin-right: 7px;
 }
-#contacts{
-border: none;
+#personal-info #each-holder {
+  margin-top: 29px;
+  background: #F3F3F3;
+  width: 100%;
+  border-radius: 6px;
+  border-bottom: 5px solid #D6D5D5;
 }
 
 /* adaptive kostili*/ 
