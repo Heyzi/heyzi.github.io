@@ -108,6 +108,7 @@ body {
     border-bottom: 1px solid #FFF;
     padding-top: 7px;
     padding-bottom: 7px;
+	border-color: #ccc;
 }
 #personal-info #each-holder .each:first-child {
     border-top: none;
@@ -115,7 +116,6 @@ body {
 }
 #personal-info #each-holder .each:last-child {
     border-bottom: none;
-    padding-bottom: 8px;
 }
 #personal-info #each-holder .each>.icon {
     width: 17px;
