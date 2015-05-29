@@ -13,4 +13,8 @@ function initialize() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+   $(document).ready(function () {
+        $('#map_canvas').on('shown', function () {
+            renderMap();
+        });
+    })
