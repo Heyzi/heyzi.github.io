@@ -1,4 +1,4 @@
-$("data-toggle=popover]").popover({
+$('data-toggle=popover]').popover({
   html: true,
   trigger: 'hover',
   placement: 'bottom',
