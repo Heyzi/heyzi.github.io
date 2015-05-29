@@ -51,7 +51,7 @@ clear-fix::after {
 }
 
 .row div {
-	background:white;
+	background:#ccc;
 	height: 1000px;
 	border: 1px solid #a5d4fc;
 	font-family: "Open Sans", sans-serif;
