@@ -1,44 +1,19 @@
-myLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
-     centerLatlng = new google.maps.LatLng(56.32039899999999,44.002245000000016);
+function initialize() {
+  var myLatlng = new google.maps.LatLng(59.575129, 30.121597);
+  var mapOptions = {
+    zoom: 7,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
-      //start of modal google map
-      $("#myModal").modal({
-          show: false
-      }).on("shown", function()
-      {
-          var map_options = {
-            zoom: 17,
-            mapTypeControl: false,
-            center:centerLatlng,
-            panControl:false,
-            rotateControl:false,
-            streetViewControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-
-        var map = new google.maps.Map(document.getElementById("mapcanvas"), map_options);
-
-         var contentString = '<div id="mapInfo">'+
-            '<p><strong>Нижегородский театр «Комедія»</strong><br>'+
-            'г.Нижний Новгород, ул. Грузинская, д. 23</p>'+
-            '<a href="http://comedia.nnov.ru/" target="_blank">Перейти на сайт</a>'+
-            '</div>';
-
-          var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
-          
-          var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title:"Нижегородский театр «Комедія»",
-                  maxWidth: 200,
-                  maxHeight: 200
-          });
-          
-          google.maps.event.addListener(marker, 'click', function() {
-             infowindow.open(map,marker);
-          });
-          infowindow.open(map,marker);
-      });
-      //end of modal google map
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+  });
+}
+$('#mymodal').on('shown', function () {
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(new google.maps.LatLng(42.7369792, -84.48386540000001));
+});
+google.maps.event.addDomListener(window, 'load', initialize);
