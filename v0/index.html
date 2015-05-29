@@ -107,7 +107,13 @@
 							</div>
 					<div class="MainContent col-xs-8 col-sm-8 col-md-5 col-lg-5">
 					  <!--Body content-->
-
+$(function() {
+  var $modal = $('#mymodal'),
+    $map = $('#map_canvas');
+  $modal.on('shown.bs.modal', function () {
+    google.maps.event.trigger($map[0], 'resize');
+  });
+});
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Map</button>
 
 
