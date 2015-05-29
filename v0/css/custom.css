@@ -89,9 +89,8 @@ printbtn btn btn-default navbar-btn hidden-print
   background: none;
   border-color: #ccc;
   background-image: none;
-  float: right;
   font-family: "Open Sans", sans-serif;
-  margin-right: 5px;
+  margin-top: 5px;
  }
 
 /* 
