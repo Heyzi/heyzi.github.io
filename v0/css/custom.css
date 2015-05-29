@@ -122,9 +122,9 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 }
-html, body, #map-canvas {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
+#map-canvas {
+    height: 220px;
+  margin-left: 8px;
+    margin-top: 5px;
+
 }
