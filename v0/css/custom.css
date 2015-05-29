@@ -63,6 +63,9 @@ body {
 .social {
   margin-right: 7px;
 }
+#contacts{
+	background: none;
+}
 #personal-info #each-holder {
   margin-top: 29px;
   background: #F3F3F3;
