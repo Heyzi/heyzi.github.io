@@ -122,5 +122,9 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 }
-
+#myModal label { width: auto!important; display:inline!important; }
+#myModal img { max-width: none!important; }
+#mapcanvas {width:520px; height:400px}
+#mapcanvas label { width: auto!important; display:inline!important; }
+#mapcanvas img { max-width: none!important; }
 
