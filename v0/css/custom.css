@@ -99,7 +99,8 @@ body {
 	  border-width: 3px;
 	  border-radius: 7px;
 	  border-style: solid;
-	  border-color: #red;
+	  border-color: red;
+	  height: 100%;
  }
 
 @media (max-width: 480px) { 
