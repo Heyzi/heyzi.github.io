@@ -13,7 +13,7 @@ clear-fix::after {
 	float: none;
 	font-size: 20px;
 	margin-right: 0px; 
-	background-color: rgba(248, 248, 248, 1);
+	background-color: white;
     border-width: 1px;
     border-radius: 7px;
 	border-style: solid;
@@ -57,7 +57,7 @@ clear-fix::after {
 	font-family: "Open Sans", sans-serif;
 }
 body {
-	background: #FFFFFF;
+	background: rgb(248, 248, 248);
 }
 .pofilepic{
 border-radius: 10px;
