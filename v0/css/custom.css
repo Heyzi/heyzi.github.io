@@ -75,16 +75,9 @@ body {
     border: 1px solid rgb(248, 248, 248);
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
+	font-size:10px;
 	min-width: 120px;
-    color: rgba(26, 188, 126, 0.81);
     overflow: hidden;
-    margin: 0 auto;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-    margin: 0 2px;
-    margin-left: -15px;
 }
 #personal-info #each-holder .each {
     border: 1px solid rgb(248, 248, 248);
@@ -92,6 +85,7 @@ body {
     padding-bottom: 7px;
 	border-color: #ccc;
 	text-align: center;
+	
 }
 
 
