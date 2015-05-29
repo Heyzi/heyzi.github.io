@@ -63,6 +63,9 @@ body {
 .social {
   margin-right: 7px;
 }
+#contacts{
+border: none;
+}
 
 /* adaptive kostili*/ 
 @media (max-width: 480px) { 
