@@ -60,12 +60,9 @@ body {
 	max-width: 100%;
 	margin-top:10px;
 }
-#contects .a{
-	line-height: 1.7em;
-	font-weight: lighter;
-	letter-spacing: 1px;
-	font-size: 16px;
-  }
+.social {
+  margin-right: 7px;
+}
 
 /* adaptive kostili*/ 
 @media (max-width: 480px) { 
