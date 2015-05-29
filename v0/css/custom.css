@@ -78,7 +78,6 @@ body {
     background: white;
     width: 100%;
     border-radius: 6px;
-	text-align: center;
 	font-family: "Open Sans", sans-serif;
 	min-width: 120px;
     overflow: hidden;
@@ -95,6 +94,12 @@ body {
   font-family: "Open Sans", sans-serif;
   margin-top: 5px;
   min-width: 125px;
+ }
+ .MainContent{
+  border-width: 3px;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: #red;
  }
 
 @media (max-width: 480px) { 
