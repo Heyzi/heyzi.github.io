@@ -67,7 +67,7 @@ body {
 	min-width: 125px;
 }
 .social {
-  margin-right: 7px;
+	margin-right: 7px;
 }
 #contacts{
 	background: none;
@@ -87,19 +87,19 @@ body {
 	text-align: center;
 }
 .cbtn{
-  display: inherit;
-  background: none;
-  border-color: #ccc;
-  background-image: none;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 5px;
-  min-width: 125px;
+	  display: inherit;
+	  background: none;
+	  border-color: #ccc;
+	  background-image: none;
+	  font-family: "Open Sans", sans-serif;
+	  margin-top: 5px;
+	  min-width: 125px;
  }
  .MainContent{
-  border-width: 3px;
-  border-radius: 7px;
-  border-style: solid;
-  border-color: #red;
+	  border-width: 3px;
+	  border-radius: 7px;
+	  border-style: solid;
+	  border-color: #red;
  }
 
 @media (max-width: 480px) { 
