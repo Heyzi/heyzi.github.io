@@ -91,6 +91,7 @@ printbtn btn btn-default navbar-btn hidden-print
   background-image: none;
   font-family: "Open Sans", sans-serif;
   margin-top: 5px;
+  min-width: 125px;
  }
 
 /* 
