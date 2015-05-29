@@ -122,10 +122,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 }
-#map_canvas {
-	height: 300px;
-	width: auto;
-	margin: 10px 10px;
+html, body, #map-canvas  {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+#map-canvas {
+  width:500px;
+  height:480px;
+}
 
