@@ -1,5 +1,5 @@
 $(function () {
-    $("#btnShow").click(function () {
+    $("#contactf").click(function () {
         $("#dialog").dialog({
             modal: true,
             title: "Google Map",
