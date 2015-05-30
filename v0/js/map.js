@@ -11,7 +11,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 		  
-				google.maps.event.addDomListener(window, 'load', map_init);
+
       
       //start of modal google map
       $('#mapmodals').on('shown.bs.modal', function () {
