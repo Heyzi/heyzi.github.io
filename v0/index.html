@@ -123,36 +123,33 @@
 					<div class="MainContent col-xs-12 col-sm-6 col-md-12 col-lg-12">
 					  <!--Body content-->
         
-            <!-- Button to trigger modal -->
-            <p><a href="#mapmodals" data-toggle="modal" role="button"><img src="04_maps.png" width="64" height="64" alt="map Venice" title="click to open Map"></a></p>  
+            
     </div>
+					<!-- Modal -->
+					  <div class="modal fade" id="mapmodals">
+						<div class="modal-dialog modal-lg">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							  <h4 class="modal-title">Гатчина</h4>
+							</div>
+							<div class="modal-body">
+							  <div id="map-container"></div>
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="close" data-dismiss="modal">Я понял где это :)</button>
+							</div>
+						  </div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					  </div><!-- /.modal -->
 
  
-<!-- Modal -->
-  <div class="modal fade" id="mapmodals">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Peggy Guggenheim Collection - Venice</h4>
-        </div>
-        <div class="modal-body">
-          <div id="map-container"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="close" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
- 
 
 
-					</div>
 			</div>
 		</div>
-
+	
 		<div class="clearfix"></div>
 		<script src="js/map.js"></script>
+</body>
 </html>
