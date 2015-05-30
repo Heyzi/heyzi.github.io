@@ -167,33 +167,7 @@
 				var_map = new google.maps.Map(document.getElementById("map-container"),
 						var_mapoptions);
 	
-			var mappin = "Pin-icon.png"
-			var var_marker = new google.maps.Marker({
-				map: var_map,
-				draggable: false,
-				icon: mappin,
-				position: var_location,
-				title: "Click on this Pin to re-open Infobox",
-				maxWidth: 200,
-				maxHeight: 200,
-				visible: true
-			});
 			 
-			var var_infobox_props = {
-				 content: "<strong>Peggy Guggenheim Collection</strong><br><br>Dorsoduro, 701-704<br>30123<br>Venezia<br>P: (+39) 041 240 5411<br><br><a href='http://www.guggenheim.org/venice' target='_blank' style='color:darkblue'>Plan your visit</a>"
-				,disableAutoPan: false
-				,maxWidth: 0
-				,pixelOffset: new google.maps.Size(-10, 0)
-				,zIndex: null
-				,boxClass: "myInfobox"
-				,closeBoxMargin: "2px"
-				,closeBoxURL: "close_sm.png"
-				,infoBoxClearance: new google.maps.Size(1, 1)
-				,visible: true
-				,pane: "floatPane"
-				,enableEventPropagation: false
-			};
- 
 				  google.maps.event.addListener(var_marker, 'click', function(e) {
 					 var_infobox.open(var_map, this);
 				  });
