@@ -5,7 +5,7 @@
 			
             var var_mapoptions = {
               center: var_location,
-              zoom: 18,
+              zoom: 9,
               mapTypeId: google.maps.MapTypeId.ROADMAP,
               mapTypeControl: false,
               panControl:false,
@@ -19,6 +19,10 @@
 				  google.maps.event.addListener(var_marker, 'click', function(e) {
 					 var_infobox.open(var_map, this);
 				  });
+				  var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(59.566108, 30.120255),
+					map: var_map
+					});
 		  
       }
 		  
