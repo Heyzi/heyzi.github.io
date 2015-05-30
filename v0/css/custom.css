@@ -122,12 +122,13 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 }
-  body { padding: 10px; background-color:#CCC }
-  #map-container { height: 450px }
-  .myInfobox {
+
+body { padding: 10px; background-color:#CCC }
+#map-container { height: 450px }
+.myInfobox {
 				border: solid 1px black;
 				background-color:rgba(255, 255, 255, 0.5);
-				width: 280px;
+				width: 180px;
 				color: #000;
 				font-family: Arial;
 				font-size: 14px;
