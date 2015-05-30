@@ -1,5 +1,5 @@
 			var var_map;
-    		var var_location = new google.maps.LatLng(45.430817,12.331516);
+    		var var_location = new google.maps.LatLng(59.574180, 30.128653);
 	
      function map_init() {		 	
 			
@@ -20,10 +20,6 @@
 					 var_infobox.open(var_map, this);
 				  });
 		  
-			var var_infobox = new InfoBox(var_infobox_props);
-	
-				var_infobox.open(var_map, var_marker);
-			
       }
 		  
 				google.maps.event.addDomListener(window, 'load', map_init);
