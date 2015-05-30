@@ -15,6 +15,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
       
       //start of modal google map
       $('#mapmodals').on('shown.bs.modal', function () {
-          google.maps.event.trigger(var_map, "resize");
+          google.maps.event.trigger(map, "resize");
           var_map.setCenter(map);
       });
