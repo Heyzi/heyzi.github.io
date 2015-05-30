@@ -9,9 +9,12 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+		  
+				google.maps.event.addDomListener(window, 'load', map_init);
       
       //start of modal google map
       $('#mapmodals').on('shown.bs.modal', function () {
           google.maps.event.trigger(var_map, "resize");
-          var_map.setCenter(var_location);
+          var_map.setCenter(map);
       });
