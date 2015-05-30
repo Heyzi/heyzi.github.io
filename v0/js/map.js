@@ -5,7 +5,7 @@
 			
             var var_mapoptions = {
               center: var_location,
-              zoom: 9,
+              zoom: 8,
               mapTypeId: google.maps.MapTypeId.ROADMAP,
               mapTypeControl: false,
               panControl:false,
