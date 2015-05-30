@@ -49,23 +49,23 @@
 			<!-- ===========================
 			navbar
 			============================ -->
-			<nav class="navbar navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<i class="navbar-brand marg1 navbar-spec fa fa-user hidden-xs"></i>
-						<a class="navbar-brand marg navbar-spec">Платонов Александр</a>
-						<i class="navbar-brand marg1 navbar-spec fa fa-desktop hidden-xs"></i>
-						<a class="navbar-brand marg navbar-spec hidden-xs "> Системное администрирование</a>
-						<i class="navbar-brand marg1 navbar-spec fa fa-file-o hidden-xs hidden-sm hidden-md"></i>
-						<a class="navbar-brand marg navbar-spec hidden-xs hidden-sm hidden-md"> WEB разработка</a>
-						<button type="button" onClick="window.print()"  class="printbtn btn btn-default navbar-btn hidden-print">Распечатать</button>
-					</div>
-				</div>
-			</nav>
-			<div class="clearfix"></div>
-		<!-- ===========================
-        Content
-        ============================ -->
+					<nav class="navbar navbar-fixed-top">
+						<div class="container">
+							<div class="navbar-header">
+								<i class="navbar-brand marg1 navbar-spec fa fa-user hidden-xs"></i>
+								<a class="navbar-brand marg navbar-spec">Платонов Александр</a>
+								<i class="navbar-brand marg1 navbar-spec fa fa-desktop hidden-xs"></i>
+								<a class="navbar-brand marg navbar-spec hidden-xs "> Системное администрирование</a>
+								<i class="navbar-brand marg1 navbar-spec fa fa-file-o hidden-xs hidden-sm hidden-md"></i>
+								<a class="navbar-brand marg navbar-spec hidden-xs hidden-sm hidden-md"> WEB разработка</a>
+								<button type="button" onClick="window.print()"  class="printbtn btn btn-default navbar-btn hidden-print">Распечатать</button>
+							</div>
+						</div>
+					</nav>
+					<div class="clearfix"></div>
+					<!-- ===========================
+					Content
+					============================ -->
 			<div id="content" class="row">
 				    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
 					  <!--Sidebar content-->
@@ -122,74 +122,34 @@
 					<div class="MainContent col-xs-12 col-sm-6 col-md-12 col-lg-12">
 					  <!--Body content-->
         
-            <!-- Button to trigger modal -->
-            <p><a href="#mapmodals" data-toggle="modal" role="button"><img src="04_maps.png" width="64" height="64" alt="map Venice" title="click to open Map"></a></p>  
-    </div>
-
- 
-<!-- Modal -->
-  <div class="modal fade" id="mapmodals">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Peggy Guggenheim Collection - Venice</h4>
-        </div>
-        <div class="modal-body">
-          <div id="map-container"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="close" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
- 
-
-
-<script>
-			var var_map;
-    		var var_location = new google.maps.LatLng(45.430817,12.331516);
-	
-     function map_init() {		 	
-			
-            var var_mapoptions = {
-              center: var_location,
-              zoom: 18,
-              mapTypeId: google.maps.MapTypeId.ROADMAP,
-              mapTypeControl: false,
-              panControl:false,
-              rotateControl:false,
-              streetViewControl: false,
-            };
-			
-				var_map = new google.maps.Map(document.getElementById("map-container"),
-						var_mapoptions);
-	
-			 
-				  google.maps.event.addListener(var_marker, 'click', function(e) {
-					 var_infobox.open(var_map, this);
-				  });
-		  
-			var var_infobox = new InfoBox(var_infobox_props);
-	
-				var_infobox.open(var_map, var_marker);
-			
-      }
-		  
-				google.maps.event.addDomListener(window, 'load', map_init);
-      
-      //start of modal google map
-      $('#mapmodals').on('shown.bs.modal', function () {
-          google.maps.event.trigger(var_map, "resize");
-          var_map.setCenter(var_location);
-      });
-</script>
+					
 					</div>
-			</div>
-		</div>
+
+ 
+
+
+
+ 
 
 		<div class="clearfix"></div>
-
+		
+				<div class="modal fade" id="mapmodals">
+				<div class="modal-dialog modal-lg">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					  <h4 class="modal-title">Peggy Guggenheim Collection - Venice</h4>
+					</div>
+					<div class="modal-body">
+					  <div id="map-container"></div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="close" data-dismiss="modal">Close</button>
+					</div>
+				  </div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			  </div><!-- /.modal -->
+			</div>  
+		</div>
+</body>
 </html>
