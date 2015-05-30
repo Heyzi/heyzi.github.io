@@ -5,7 +5,7 @@
 			
             var var_mapoptions = {
               center: var_location,
-              zoom: 12,
+              zoom: 10,
               mapTypeId: google.maps.MapTypeId.ROADMAP,
               mapTypeControl: false,
               panControl:false,
@@ -16,16 +16,12 @@
 				var_map = new google.maps.Map(document.getElementById("map-container"),
 						var_mapoptions);
 	 
-				  google.maps.event.addListener(var_marker, 'click', function(e) {
-					 var_infobox.open(var_map, this);
-				  });
 				  var marker = new google.maps.Marker({
 					position: new google.maps.LatLng(59.566108, 30.120255),
 					map: var_map
 					});
 		  
-      }
-		  
+      }	  
 				google.maps.event.addDomListener(window, 'load', map_init);
       
       //start of modal google map
