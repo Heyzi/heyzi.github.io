@@ -96,9 +96,9 @@ clear-fix::after {
  }
 .MainContent{
 	  border-width: 3px;
-	  border-radius: 7px;
+	  border-width: 1px;
 	  border-style: solid;
-	  border-color: red;
+	  border-color: #ccc;
 	  height: 100%;
  }
 
@@ -125,7 +125,9 @@ body { padding: 10px;}
 #map-container { height: 450px }
 
 
-
+.title
+{
+}
 
 
 
