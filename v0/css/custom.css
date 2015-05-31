@@ -125,33 +125,33 @@ body { padding: 10px;}
 #map-container { height: 450px }
 
 
-#educational-attainment .section-content, #working-experience .section-content {
+#educational-attainment , #working-experience  {
     height: auto;
     max-height: 330px;
     overflow: auto;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline, #working-experience .section-content ul.cbp_tmtimeline {
+#educational-attainment, #working-experience  {
     margin: 0;
     margin-left: -15px;
     margin-right: -15px;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline>li, #working-experience .section-content ul.cbp_tmtimeline>li {
+#educational-attainment , #working-experience  {
     margin: 0 0 15px;
     padding-left: 15px;
     padding-right: 15px;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline>li+li, #working-experience .section-content ul.cbp_tmtimeline>li+li {
+#educational-attainment , #working-experience{
     border-top: 1px solid #FFF;
     padding-top: 9px;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline>li:hover .cbp_tmicon, #working-experience .section-content ul.cbp_tmtimeline>li:hover .cbp_tmicon {
+#educational-attainment , #working-experience  {
     background: #6D6B6B;
     box-shadow: 0 0 0 5px #AAA;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline>li:last-child, #working-experience .section-content ul.cbp_tmtimeline>li:last-child {
+#educational-attainment , #working-experience  {
     margin: 0;
 }
-#educational-attainment .section-content ul.cbp_tmtimeline>li .cbp_tmicon, #working-experience .section-content ul.cbp_tmtimeline>li .cbp_tmicon {
+#educational-attainment , #working-experience {
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -218,7 +218,7 @@ body { padding: 10px;}
     height: 330px;
     min-height: 830px;
     max-height: 330px;
-	}
+}
 
 
 
