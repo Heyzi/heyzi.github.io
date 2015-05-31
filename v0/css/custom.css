@@ -74,6 +74,7 @@ body {
 }
 #contacts{
 	background: none;
+	text-align: center;
 }
 
 #contactf {
@@ -82,8 +83,7 @@ body {
     border-radius: 6px;
 	font-family: "Open Sans", sans-serif;
 	min-width: 120px;
-    overflow: hidden;
-    padding-top: 7px;
+
 	border-color: #ccc;
 	text-align: center;
 }
