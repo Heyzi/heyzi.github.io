@@ -95,6 +95,8 @@ clear-fix::after {
 	  min-width: 125px;
  }
 .MainContent{
+	  margin-right: -5px;
+	  margin-left: -5px;
 	  border-width: 3px;
 	  border-width: 1px;
 	  border-style: solid;
