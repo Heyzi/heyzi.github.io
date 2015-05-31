@@ -214,5 +214,11 @@ body { padding: 10px;}
 #educational-attainment .section-content ul.cbp_tmtimeline>li .cbp_tmlabel:after, #working-experience .section-content ul.cbp_tmtimeline>li .cbp_tmlabel:after {
     border-bottom-color: #DFDFDF;
 }
+#educational-attainment .section-content, #working-experience .section-content {
+    height: 330px;
+    min-height: 830px;
+    max-height: 330px;
+	}
+
 
 
