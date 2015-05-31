@@ -60,9 +60,7 @@ clear-fix::after {
 	border: 1px solid #a5d4fc;
 	font-family: "Open Sans", sans-serif;
 }
-body {
-	background: rgb(248, 248, 248);
-}
+
 .pofilepic{
 	border-radius: 10px;
 	max-width: 100%;
