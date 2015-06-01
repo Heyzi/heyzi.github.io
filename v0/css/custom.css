@@ -146,13 +146,13 @@ font-size:20px;
 .cbp_tmlabel{
 	  margin: 0;
 	  background: white;
-	  padding: 10px;  
-	  background: #000000;
-	  padding: 2em;
 	  font-size: 1.2em;
 	  font-weight: 300;
 	  line-height: 1.4;
 	  position: relative;
 	  border-radius: 5px;
+	  color: #4E5359;
+	  text-decoration: none;
+	  font-size: 18px;
 }
 
