@@ -49,15 +49,11 @@ clear-fix::after {
 #content {
 	margin-top:60px;
 	font-family: "Open Sans", sans-serif;
-	-webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
 }
 
 .row {
 	background:white;
 	height: 1000px;
-	border: 1px solid #a5d4fc;
 	font-family: "Open Sans", sans-serif;
 }
 
