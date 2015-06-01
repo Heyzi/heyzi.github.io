@@ -60,6 +60,7 @@ clear-fix::after {
 .pofilepic{
 	border-radius: 10px;
 	margin-top:10px;
+	width: 100%;
 	min-width: 125px;
 	max-width: 165px;
 }
@@ -96,6 +97,7 @@ clear-fix::after {
 	  border-style: solid;
 	  border-color: #ccc;
 	  height: 100%;
+	  margin-top:5px;
  }
 
 
@@ -103,9 +105,7 @@ clear-fix::after {
 .navbar-brand{
 	float: left;
 	height: 50px;
-	line-height: 20px;
-	font-family: "Open Sans", sans-serif;
-	
+	line-height: 20px;	
 }
 .printbtn {
   background: none;
