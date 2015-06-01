@@ -109,7 +109,8 @@ clear-fix::after {
 	height: 50px;
 	line-height: 20px;
 	font-family: "Open Sans", sans-serif;
-	margin-left: 0px;
+	margin-left: -25px;
+	
 }
 .printbtn {
   background: none;
