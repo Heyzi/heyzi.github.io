@@ -109,7 +109,6 @@ clear-fix::after {
 	height: 50px;
 	line-height: 20px;
 	font-family: "Open Sans", sans-serif;
-	margin-left: -25px;
 	
 }
 .printbtn {
@@ -142,5 +141,7 @@ font-size:20px;
 .head-col{
 margin-left: -8px;
 }
-
+.ctitle{
+  margin-left: -25px;
+}
 
