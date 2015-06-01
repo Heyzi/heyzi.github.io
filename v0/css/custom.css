@@ -143,3 +143,9 @@ font-size:20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.cbp_tmlabel{
+	  margin: 0;
+	  background: #DFDFDF;
+	  color: #7D7D7D;
+	  padding: 10px;
+}
