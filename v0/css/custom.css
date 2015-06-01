@@ -132,5 +132,14 @@ body { padding: 10px;}
 font-size:20px;
 }
 
-
-
+.description{
+  font-size: 13px;
+  line-height: 19px;
+  padding: 10px;
+  text-align: justify;
+  background: rgba(26, 188, 126, 0.81);
+  color: #FFF;
+  margin: 5px -10px -10px -10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
