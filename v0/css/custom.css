@@ -145,13 +145,9 @@ font-size:20px;
 }
 .cbp_tmlabel{
 	  margin: 0;
-	  background: #DFDFDF;
-	  color: #7D7D7D;
-	  padding: 10px;
-	  
-	  margin: 0 0 15px 25%;
+	  background: white;
+	  padding: 10px;  
 	  background: #000000;
-	  color: #fff;
 	  padding: 2em;
 	  font-size: 1.2em;
 	  font-weight: 300;
