@@ -134,12 +134,15 @@ font-size:20px;
 
 .ltarget{
   padding: 8px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
-
+.panel-heading{
+  background-image:none;
+}
 
 
 
