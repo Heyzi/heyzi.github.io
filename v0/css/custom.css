@@ -59,9 +59,9 @@ clear-fix::after {
 
 .pofilepic{
 	border-radius: 10px;
-	max-width: 100%;
 	margin-top:10px;
 	min-width: 125px;
+	max-width: 165px;
 }
 .social {
 	margin-right: 7px;
