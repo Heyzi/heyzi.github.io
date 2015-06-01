@@ -98,6 +98,8 @@ clear-fix::after {
 	  border-color: #ccc;
 	  height: 100%;
 	  margin-top:5px;
+	  margin-left: -5px;
+		margin-right: 5px;
  }
 
 
@@ -139,5 +141,8 @@ margin-left: -8px;
 }
 .ctitle{
   margin-left: -25px;
+}
+.wspace {
+   width: 45%;
 }
 
