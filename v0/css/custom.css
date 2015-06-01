@@ -148,4 +148,15 @@ font-size:20px;
 	  background: #DFDFDF;
 	  color: #7D7D7D;
 	  padding: 10px;
+	  
+	  margin: 0 0 15px 25%;
+	  background: #000000;
+	  color: #fff;
+	  padding: 2em;
+	  font-size: 1.2em;
+	  font-weight: 300;
+	  line-height: 1.4;
+	  position: relative;
+	  border-radius: 5px;
 }
+
