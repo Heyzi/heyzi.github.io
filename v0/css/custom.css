@@ -95,8 +95,6 @@ clear-fix::after {
 	  min-width: 125px;
  }
 .MainContent{
-	  margin-right: -5px;
-	  margin-left: -5px;
 	  border-width: 3px;
 	  border-width: 1px;
 	  border-style: solid;
@@ -140,7 +138,7 @@ font-size:20px;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
-.panel-heading{
+.panel-fix{
   background-image:none;
 }
 
