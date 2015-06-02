@@ -154,8 +154,11 @@ font-size:13px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  height:50px;
 } 
+.printfixt2{
+	margin-top:50px;
+	width:100%;
+}
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
 	display: none;
