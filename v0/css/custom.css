@@ -151,11 +151,10 @@ font-size:13px;
   width: 77%;
 }
 .nextpage{
-  margin-top: 20px;
-  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+   padding: 10px 15px;
 } 
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
