@@ -142,7 +142,7 @@ margin-left: -8px;
 }
 .body{
 background-image: none;
-margin-top: -50px;
+font-size:13px;
 }
 .col-xs-12 {
   width: 23%;
@@ -151,6 +151,9 @@ margin-top: -50px;
   width: 77%;
  /* margin-left: 60px;
   margin-right: 60px;*/
+}
+#content{
+margin-top: -50px;
 }
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
