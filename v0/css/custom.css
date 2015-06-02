@@ -154,7 +154,7 @@ font-size:13px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-   padding: 10px 15px;
+  margin-top:400px;
 } 
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
