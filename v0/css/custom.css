@@ -165,9 +165,13 @@ font-size:13px;
 }
 .printfixt4{
   width: 33%;
-  padding: 15px;
-
+  padding: 0px;
+  
 }
+div.skills * {
+    color: red;
+}
+
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
 	display: none;
