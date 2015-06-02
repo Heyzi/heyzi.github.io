@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru"
+>
+<head>
+    <title>Настраиваем Ubuntu после запуска. | WebQuant</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://webquant.ru/favicon.ico" rel="icon">
+
+<link rel="canonical" href="http://webquant.ru/posts/ubuntu">
+
+        <meta name="author" content="admin" />
+        <meta name="keywords" content="linux,настройка ubuntu" />
+        <meta name="description" content="Улучшаем и настраиваем Ubuntu. А так же самые нужные комманды." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://webquant.ru/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://webquant.ru/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://webquant.ru/theme/css/pygments/zenburn.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://webquant.ru/theme/css/style.css" type="text/css"/>
+
+        <link href="http://webquant.ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="WebQuant ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://webquant.ru/" class="navbar-brand">
+WebQuant            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="http://webquant.ru/category/linux">Linux</a>
+                        </li>
+                        <li >
+                            <a href="http://webquant.ru/category/python">Python</a>
+                        </li>
+                        <li >
+                            <a href="http://webquant.ru/category/trading">Trading</a>
+                        </li>
+                        <li >
+                            <a href="http://webquant.ru/category/web">Web</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://webquant.ru/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://webquant.ru" title="WebQuant"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://webquant.ru/category/linux" title="linux">linux</a></li>
+                <li class="active">Настраиваем Ubuntu после запуска.</li>
+            </ol>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://webquant.ru/posts/ubuntu"
+                       rel="bookmark"
+                       title="Permalink to Настраиваем Ubuntu после запуска.">
+                        Настраиваем Ubuntu после запуска.
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+               
+                <h3>Обновление</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="cp"># обновить только 1 программу</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">upgade</span> <span class="n">program</span>
+</pre></div>
+
+
+<h3>Отключаем комерческий сервис в меню Dash</h3>
+<div class="highlight"><pre> <span class="n">gsettings</span> <span class="n">set</span> <span class="n">com</span><span class="p">.</span><span class="n">canonical</span><span class="p">.</span><span class="n">Unity</span><span class="p">.</span><span class="n">Lenses</span> <span class="n">disabled</span><span class="o">-</span><span class="n">scopes</span> <span class="s">&quot;[&#39;more_suggestions-amazon.scope&#39;, &#39;more_suggestions-u1ms.scope&#39;, &#39;more_suggestions-populartracks.scope&#39;, &#39;music-musicstore.scope&#39;, &#39;more_suggestions-ebay.scope&#39;, &#39;more_suggestions-ubuntushop.scope&#39;, &#39;more_suggestions-skimlinks.scope&#39;]&quot;</span>
+</pre></div>
+
+
+<h3>Разблокировать dpkg</h3>
+<p>Часто появляется ошибка: <em>Unable to lock the administration directory (/var/lib/dpkg/) is another process using it</em></p>
+<div class="highlight"><pre><span class="n">ps</span> <span class="o">-</span><span class="n">A</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span>
+<span class="n">sudo</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="o">&lt;</span><span class="n">process</span><span class="o">-</span><span class="n">id</span><span class="o">&gt;</span>
+<span class="n">sudo</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">2345</span>
+</pre></div>
+
+
+<h3>Создание загрузочной флешки из образа диска</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">filename</span><span class="p">.</span><span class="n">iso</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span> <span class="n">bs</span><span class="o">=</span><span class="mi">16</span><span class="n">M</span>
+</pre></div>
+
+
+<ol>
+<li>ставить на форматированную fat32 флешку.</li>
+<li>включить галку - загрузочный диск.</li>
+<li>ставлю на sdb раздел, на sdb1 не получается.</li>
+<li>bs=16m сколько за раз записывается.</li>
+</ol>
+<h3>Как удалить приложение со всеми зависимостями</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">remove</span> <span class="n">firefox</span><span class="o">*</span> <span class="err">#</span> <span class="err">звездочку</span> <span class="err">добавляем</span>
+</pre></div>
+
+
+<h3>Google Drive</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="o">:</span><span class="n">thefanclub</span><span class="o">/</span><span class="n">grive</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">grive</span><span class="o">-</span><span class="n">tools</span>
+<span class="cp">#в поиске набираем Grive setup и следуем инструкциям</span>
+</pre></div>
+
+
+<h3>VLC</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="o">:</span><span class="n">djcj</span><span class="o">/</span><span class="n">vlc</span><span class="o">-</span><span class="n">stable</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">vlc</span>
+</pre></div>
+
+
+<h3>Добавляем репозиторий и ключ от него (на примере установки virtualbox)</h3>
+<div class="highlight"><pre><span class="cp">#virtualbox </span>
+<span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="s">&quot;deb http://download.virtualbox.org/virtualbox/debian trusty contrib&quot;</span> 
+<span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="n">https</span><span class="o">:</span><span class="c1">//www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - </span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">virtualbox</span><span class="o">-</span><span class="mf">4.3</span>
+<span class="cp">#незабыть установить дополнительные драйвера</span>
+<span class="p">[</span><span class="n">virtualbox</span><span class="o">-</span><span class="n">guest</span><span class="o">-</span><span class="n">additions</span><span class="p">](</span><span class="n">http</span><span class="o">:</span><span class="c1">//apt.ubuntu.com/p/virtualbox-guest-additions-iso)</span>
+<span class="cp">#и примантировать их из /usr/share/virtualbox/VBoxGuestAdditions.iso в virtualbox manager как диск</span>
+<span class="cp">#расширить виртуальный диск *.vdi, перейдя в директорию файла</span>
+<span class="n">sudo</span> <span class="n">vboxmanage</span> <span class="n">modifyhd</span> <span class="err">&#39;</span><span class="n">windows</span> <span class="mf">7.</span><span class="n">vdi</span><span class="err">&#39;</span> <span class="o">--</span><span class="n">resize</span> <span class="mi">51000</span>
+
+<span class="cp">#альтернативный пример добавления ключа</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">keyserver</span><span class="p">.</span><span class="n">ubuntu</span><span class="p">.</span><span class="n">com</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">keys</span> <span class="n">FC91AE7E</span> 
+<span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">list</span>
+</pre></div>
+
+
+<h3>Skype</h3>
+<div class="highlight"><pre><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">skype</span>
+<span class="cp"># отключить уведомления в групповом чате</span>
+<span class="err">нужно</span> <span class="err">зайти</span> <span class="err">в</span> <span class="err">чат</span> <span class="err">и</span> <span class="err">нажать</span> <span class="err">`</span><span class="o">/</span><span class="n">alertsoff</span><span class="err">`</span>
+</pre></div>
+
+
+<h3>Hex chat</h3>
+<div class="highlight"><pre><span class="nl">https:</span><span class="c1">//launchpad.net/~gwendal-lebihan-dev/+archive/ubuntu/hexchat-stable</span>
+</pre></div>
+
+
+<h3>Libreoffice</h3>
+<div class="highlight"><pre><span class="err">устанавливаем</span> <span class="err">последнюю</span> <span class="err">версию</span> <span class="mf">4.3</span> <span class="err">из</span> <span class="err">репозитория</span>
+<span class="err">расширение</span> <span class="err">для</span> <span class="err">проверки</span> <span class="err">грамматики</span>
+<span class="nl">http:</span><span class="c1">//extensions.libreoffice.org/extension-center/languagetool</span>
+</pre></div>
+
+
+<h3>Индикаторы</h3>
+<p>Погода</p>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="o">:</span><span class="n">atareao</span><span class="o">/</span><span class="n">atareao</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">my</span><span class="o">-</span><span class="n">weather</span><span class="o">-</span><span class="n">indicator</span>
+</pre></div>
+
+
+<h3>Apple slim keyboard исправляем кнопки F1-F12  в Ubuntu 14.04</h3>
+<div class="highlight"><pre><span class="cp">#Правильное Alt отображение и Command</span>
+<span class="n">echo</span> <span class="n">options</span> <span class="n">hid_apple</span> <span class="n">swap_opt_cmd</span><span class="o">=</span><span class="mi">1</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">-</span><span class="n">a</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">modprobe</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">hid_apple</span><span class="p">.</span><span class="n">conf</span>
+<span class="cp">#Восстановить работу функции кнопок </span>
+<span class="cp">#0 = отключено: Позволяет отключить клавиши &#39;Fn &quot;</span>
+<span class="cp">#1 = fkeyslast: Функциональные клавиши имеют низкий приоритет.</span>
+<span class="cp">#2 = fkeysfirst: Функциональные клавиши имеют приоритет</span>
+<span class="n">echo</span> <span class="n">options</span> <span class="n">hid_apple</span> <span class="n">fnmode</span><span class="o">=</span><span class="mi">2</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">-</span><span class="n">a</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">modprobe</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">hid_apple</span><span class="p">.</span><span class="n">conf</span>
+<span class="cp">#Добавьте копирование конфигурации загрузки файлов initramfs.</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">initramfs</span> <span class="o">-</span><span class="n">u</span> <span class="o">-</span><span class="n">k</span> <span class="n">all</span>
+<span class="n">sudo</span> <span class="n">reboot</span>
+</pre></div>
+
+
+<h3>Настраиваем VPN между ubuntu и windows 7 и заходим через xfreerdp</h3>
+<div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">add</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="o">:</span><span class="n">remmina</span><span class="o">-</span><span class="n">ppa</span><span class="o">-</span><span class="n">team</span><span class="o">/</span><span class="n">remmina</span><span class="o">-</span><span class="n">next</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">vpnc</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">xfreerdp</span>
+
+<span class="cp"># вставляем свои сертификаты в /etc/vpnc/</span>
+<span class="cp"># запуск vpnc</span>
+<span class="n">sudo</span> <span class="n">vpnc</span> <span class="n">my</span><span class="p">.</span><span class="n">conf</span>
+<span class="cp">#создаем скрипт с нужными правами rdp.sh с параметрами</span>
+<span class="cp"># для 1.03</span>
+<span class="n">xfreerdp</span> <span class="o">--</span><span class="n">plugin</span> <span class="n">cliprdr</span> <span class="o">-</span><span class="n">x</span> <span class="mh">0x80</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">wallpaper</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">full</span><span class="o">-</span><span class="n">window</span><span class="o">-</span><span class="n">drag</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">menu</span><span class="o">-</span><span class="n">animations</span> <span class="o">-</span><span class="n">g</span> <span class="mi">1856</span><span class="n">x1027</span> <span class="o">-</span><span class="n">u</span> <span class="n">my</span><span class="p">.</span><span class="n">login</span> <span class="o">-</span><span class="n">p</span> <span class="n">my</span><span class="p">.</span><span class="n">password</span> <span class="o">-</span><span class="n">z</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">certificate</span> <span class="n">my</span><span class="p">.</span><span class="n">machine</span><span class="p">.</span><span class="n">in</span><span class="p">.</span><span class="n">domain</span>
+<span class="cp"># для 1.2</span>
+<span class="n">xfreerdp</span> <span class="o">+</span><span class="n">clipboard</span> <span class="o">/</span><span class="n">cert</span><span class="o">-</span><span class="n">ignore</span> <span class="o">/</span><span class="n">u</span><span class="o">:</span><span class="n">login</span> <span class="o">/</span><span class="n">p</span><span class="o">:</span><span class="n">password</span> <span class="o">/</span><span class="n">v</span><span class="o">:</span><span class="n">my</span><span class="p">.</span><span class="n">machine</span><span class="p">.</span><span class="n">in</span><span class="p">.</span><span class="n">domain</span> <span class="o">/</span><span class="n">size</span><span class="o">:</span><span class="mi">1856</span><span class="n">x1027</span> <span class="o">-</span><span class="n">themes</span> <span class="o">-</span><span class="n">wallpaper</span> <span class="o">+</span><span class="n">fonts</span>
+<span class="cp">#бывает отваливается и нужно перезагрузить</span>
+<span class="n">ps</span> <span class="n">axu</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">vpnc</span>
+<span class="n">sudo</span> <span class="n">kill</span> <span class="err">номер</span> <span class="err">процесса</span>
+</pre></div>
+		 <div class="panel">
+                    <div class="panel-body">   
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-11-08T13:37:00+03:00"> 08 Ноябрь 2014</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="http://webquant.ru/category/linux">linux</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://webquant.ru/tag/linux.html">linux</a>
+        /
+	<a href="http://webquant.ru/tag/nastroika-ubuntu.html">настройка ubuntu</a>
+    
+</footer><!-- /.post-info -->                  
+                    </div>
+                </div>
+		
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'httpwebquantru'; // required: replace example with your forum shortname
+
+                var disqus_url = 'http://webquant.ru/posts/ubuntu';
+
+            var disqus_config = function () {
+                this.language = "ru";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://github.com/achicha"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://webquant.ru/pages/pyalgo" target="_blank">
+                Алгоритмы и задачки.py
+            </a>
+        </li>
+      </ul>
+    </li>
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/trading-data">
+                            Где скачать исторические данные для акций?
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/ya-parser">
+                            Парсим поисковую выдачу Яндекса, Python + Grab.
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/go-parser">
+                            Парсер поисковых запросов, используя grab и firebug.
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/quicksort">
+                            Быстрая сортировка в Python (Quicksort, сортировка Хоара).
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/nod-nok">
+                            Нахождение НОД и НОК.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <noindex>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014
+            &middot; Powered by <a href="http://webquant.ru/" target="_blank">WebQuant</a>         </div>
+		
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+   </noindex>
+</footer>
+<script src="http://webquant.ru/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://webquant.ru/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://webquant.ru/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'httpwebquantru'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-53353786-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27168830 = new Ya.Metrika({id:27168830,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27168830" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

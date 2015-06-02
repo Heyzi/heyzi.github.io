@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru"
+>
+<head>
+    <title>Базовые типы и структуры данных в Python. | WebQuant</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://webquant.ru/favicon.ico" rel="icon">
+
+<link rel="canonical" href="http://webquant.ru/posts/data-structures">
+
+        <meta name="author" content="admin" />
+        <meta name="keywords" content="python,data structures,структуры данных,python методы,python списоки,словари python,python кортеж" />
+        <meta name="description" content="Немного о базовых структурах данных в языке Python и методах их использования." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://webquant.ru/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://webquant.ru/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://webquant.ru/theme/css/pygments/zenburn.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://webquant.ru/theme/css/style.css" type="text/css"/>
+
+        <link href="http://webquant.ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="WebQuant ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://webquant.ru/" class="navbar-brand">
+WebQuant            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://webquant.ru/category/linux">Linux</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://webquant.ru/category/python">Python</a>
+                        </li>
+                        <li >
+                            <a href="http://webquant.ru/category/trading">Trading</a>
+                        </li>
+                        <li >
+                            <a href="http://webquant.ru/category/web">Web</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://webquant.ru/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="http://webquant.ru" title="WebQuant"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="http://webquant.ru/category/python" title="python">python</a></li>
+                <li class="active">Базовые типы и структуры данных в Python.</li>
+            </ol>
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://webquant.ru/posts/data-structures"
+                       rel="bookmark"
+                       title="Permalink to Базовые типы и структуры данных в Python.">
+                        Базовые типы и структуры данных в Python.
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+               
+                <h2>Типы и структуры данных</h2>
+<p>Структуры данных позволяют хранить и обрабатывать множество однотипных данных, а так же имеющие встроенные методы для добавления, поиска, изменения и удаления данных.
+Так как в Python используется <strong><em>динамическая типизация</em></strong>, так что типы данных определяются автоматически во время исполнения, и заранее объявлять их не нужно.</p>
+<p><em>Изменяемые</em>:</p>
+<ul>
+<li>списки</li>
+<li>словари</li>
+<li>множества (set)</li>
+</ul>
+<p><em>Неизменяемые</em>:</p>
+<ul>
+<li>строки </li>
+<li>кортежи</li>
+<li>числа </li>
+<li>
+<p>фиксированные множества (frozenset) </p>
+<p>dir(s)  узнать все методы 
+help(S.replace) узнать описание метода</p>
+</li>
+</ul>
+<h3>Списки</h3>
+<p>Списки (<strong>list</strong>) - изменяемый тип данных, который содержит упорядоченный набор элементов, т.е. хранит последовательность элементов.</p>
+<p><strong>Изменяемые</strong>, как только список создан, можно добавлять, удалять или искать элементы в нём.</p>
+<p>Элементами списков могут быть объекты разных типов данных, заключенные в <strong><em>квадратные скобки</em></strong>.</p>
+<div class="highlight"><pre><span class="cp">#создаем список</span>
+<span class="n">shoplist</span> <span class="o">=</span> <span class="p">[</span><span class="err">&#39;яблоки&#39;</span><span class="p">,</span> <span class="err">&#39;манго&#39;</span><span class="p">,</span> <span class="err">&#39;морковь&#39;</span><span class="p">,</span> <span class="err">&#39;бананы&#39;</span><span class="p">]</span>
+<span class="n">shoplist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="err">&#39;рис&#39;</span><span class="p">)</span> <span class="err">#</span> <span class="err">Добавить</span> <span class="err">элемент</span> <span class="err">эквивалент</span> <span class="n">a</span><span class="p">[</span><span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">:</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<span class="n">shoplist</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="err">#</span> <span class="err">удалить</span> <span class="mi">2</span> <span class="err">элемент</span> <span class="err">из</span> <span class="err">списка</span>
+<span class="n">shoplist</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span> <span class="err">#</span> <span class="err">отсортируем</span> <span class="err">список</span>
+<span class="n">print</span><span class="p">(</span><span class="n">shoplist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="err">#</span> <span class="err">вывести</span> <span class="mi">1</span> <span class="err">элемент</span> <span class="err">списка</span>
+<span class="n">del</span> <span class="n">shoplist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="err">#</span> <span class="err">удалить</span> <span class="err">элемент</span>
+<span class="n">help</span><span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="err">#</span> <span class="err">хелп</span> <span class="err">по</span> <span class="err">спискам</span>
+
+<span class="cp">#Обращение по срезу дает нам новый список</span>
+<span class="n">newlist</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+
+<h3>Словари</h3>
+<p>Словарь (<strong>dict</strong>) – это некий аналог адресной книги. В других языках - Хеши ( hash) или Ассоциированные массивы.</p>
+<p>Задаются пары ключ:значение (разделяемые двоеточием), заключенные в <strong><em>фигурные скобки</em></strong>.</p>
+<p>Пары ключ-значение никоим образом <em>не упорядоченны</em> в словаре.
+Доступ к элементам словаря производиться по ключу, а не по индексу.</p>
+<p><em>Словари это изменяемые отображения.</em> </p>
+<div class="highlight"><pre><span class="cp">#Пары ключ-значение указываются в словаре следующим образом</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="err">&#39;</span><span class="n">key1</span><span class="err">&#39;</span> <span class="o">:</span> <span class="err">&#39;</span><span class="n">value1</span><span class="err">&#39;</span><span class="p">,</span>
+    <span class="err">&#39;</span><span class="n">key2</span><span class="err">&#39;</span> <span class="o">:</span> <span class="err">&#39;</span><span class="n">value2</span><span class="err">&#39;</span> 
+    <span class="p">}</span>
+<span class="cp"># Добавление пары ключ-значение</span>
+<span class="n">d</span><span class="p">[</span><span class="err">&#39;</span><span class="n">Guido</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">guido</span><span class="err">@</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="err">&#39;</span>
+<span class="n">del</span> <span class="n">ab</span><span class="p">[</span><span class="err">&#39;</span><span class="n">Spammer</span><span class="err">&#39;</span><span class="p">]</span> <span class="err">#</span> <span class="err">удаление</span>
+<span class="cp">#вывести все пары</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">address</span> <span class="n">in</span> <span class="n">d</span><span class="p">.</span><span class="n">items</span><span class="p">()</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="err">&#39;Контакт</span> <span class="p">{</span><span class="mi">0</span><span class="p">}</span> <span class="err">с</span> <span class="err">адресом</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="err">&#39;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">))</span>
+<span class="n">d</span><span class="p">.</span><span class="n">values</span><span class="p">()</span>
+<span class="n">d</span><span class="p">.</span><span class="n">items</span><span class="p">()</span>
+<span class="n">d</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="err">удалить</span> <span class="err">элемент</span>
+</pre></div>
+
+
+<h5>Сортировка словаря</h5>
+<div class="highlight"><pre><span class="cp">#вынуть  все ключи и отсортировать</span>
+<span class="cp"># использовать sorted</span>
+<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">sorted</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">&quot;=&gt;&quot;</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+
+<p><strong>zip</strong> объединить списки ключей и значений</p>
+<div class="highlight"><pre><span class="n">dict</span><span class="p">(</span><span class="n">zip</span><span class="p">([</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;b&#39;</span><span class="p">,</span><span class="sc">&#39;c&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+<span class="o">-&gt;</span><span class="p">{</span><span class="sc">&#39;a&#39;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="sc">&#39;b&#39;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="sc">&#39;c&#39;</span><span class="o">:</span><span class="mi">3</span><span class="p">}</span>
+</pre></div>
+
+
+<h3>Множества</h3>
+<p>Множества или Наборы (<strong>set</strong>) – это неупорядоченные коллекции уникальных и неизменяемых объектов, которые поддерживают операции мамематических множеств.Множества изменяемы.</p>
+<p>Они необходимы тогда, когда присутствие объекта в наборе важнее порядка или того, сколько раз данный объект там встречается. Т.к. каждый <strong>элемент может входить в множество всего 1 раз</strong>.</p>
+<p>Если нужно неизменяемое множество - frozenset</p>
+<div class="highlight"><pre><span class="n">bri</span> <span class="o">=</span> <span class="n">set</span><span class="p">([</span><span class="err">&#39;Бразилия&#39;</span><span class="p">,</span> <span class="err">&#39;Россия&#39;</span><span class="p">,</span> <span class="err">&#39;Индия&#39;</span><span class="p">])</span>
+<span class="err">&#39;Индия&#39;</span> <span class="n">in</span> <span class="n">bri</span> <span class="err">#</span> <span class="o">&gt;&gt;&gt;</span><span class="n">True</span>
+<span class="n">bric</span> <span class="o">=</span> <span class="n">bri</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">bric</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="err">&#39;Китай&#39;</span><span class="p">)</span>
+<span class="n">bric</span><span class="p">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">bri</span><span class="p">)</span> <span class="err">#</span> <span class="o">&gt;&gt;&gt;</span><span class="n">True</span>
+<span class="n">bri</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="err">&#39;Россия&#39;</span><span class="p">)</span>
+<span class="n">bri</span> <span class="o">&amp;</span> <span class="n">bric</span> <span class="err">#</span> <span class="n">OR</span> <span class="n">bri</span><span class="p">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">bric</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="err">&#39;Бразилия&#39;</span><span class="p">,</span> <span class="err">&#39;Индия&#39;</span><span class="p">}</span>
+
+<span class="cp">#удаление повторов из списка</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">set</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+</pre></div>
+
+
+<h3>Строки</h3>
+<p>Упорядоченные последовательности символов, используемые для хранения и представления информации.Неизменяемые, при переприсваивании создается новый объект.
+Имеют порядок, можно обращаться по индексу.</p>
+<div class="highlight"><pre><span class="n">S</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">new</span> <span class="n">line</span><span class="err">&#39;</span>
+
+<span class="n">u</span><span class="err">&#39;</span><span class="n">unicode_line</span><span class="err">&#39;</span>
+<span class="n">b</span><span class="err">&#39;</span><span class="n">byte_line</span><span class="err">&#39;</span>
+<span class="n">r</span><span class="err">&#39;</span><span class="n">non_format</span><span class="err">&#39;</span>
+<span class="err">\</span><span class="n">n</span> <span class="o">-</span> <span class="n">new</span> <span class="n">line</span>
+<span class="err">\</span><span class="n">t</span> <span class="o">-</span> <span class="n">tab</span> <span class="n">symbol</span>
+<span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">deep</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="n">S</span><span class="o">=</span> <span class="err">&#39;&#39;</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">List</span><span class="p">)</span> <span class="err">объединения</span> <span class="err">списков</span> <span class="err">в</span> <span class="err">строку</span>
+<span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="err">&#39;&#39;</span><span class="p">)</span> <span class="err">разбитие</span> <span class="err">строки</span> <span class="err">по</span> <span class="err">пробелу</span>
+<span class="n">line</span><span class="p">.</span><span class="n">strip</span>
+<span class="n">line</span><span class="p">.</span><span class="n">startwith</span><span class="p">(</span><span class="err">&#39;</span><span class="n">The</span><span class="err">&#39;</span><span class="p">)</span> <span class="err">строка</span> <span class="err">начинается</span> <span class="err">с</span>
+</pre></div>
+
+
+<h3>Кортежи</h3>
+<p>Кортежи (<strong>tuple</strong>) служат для хранения нескольких объектов вместе. Аналог списков, но без такой обширной функциональности, которую предоставляет класс списка. 
+Списки являются <strong>неизменяемыми</strong>.
+Элементы заключаются в <strong><em>круглые скобки</em></strong>, через запятую.</p>
+<div class="highlight"><pre><span class="cp">#создаем котеж</span>
+<span class="n">zoo</span> <span class="o">=</span> <span class="p">(</span><span class="err">&#39;питон&#39;</span><span class="p">,</span> <span class="err">&#39;слон&#39;</span><span class="p">,</span> <span class="err">&#39;пингвин&#39;</span><span class="p">)</span>
+<span class="n">zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="err">#</span> <span class="err">обращаемся</span> <span class="err">к</span> <span class="mi">3</span> <span class="err">элементу</span><span class="p">,</span> <span class="err">отсчет</span> <span class="err">начинается</span> <span class="err">с</span> <span class="err">нуля</span>
+<span class="cp"># пустой кортеж</span>
+<span class="n">myempty</span> <span class="o">=</span> <span class="p">()</span>
+<span class="cp"># кортеж из 1 элемента</span>
+<span class="n">singleton</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,)</span><span class="err">#</span> <span class="err">запятая</span> <span class="err">обязательна</span>
+<span class="n">zoo</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">zoo</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>Инструменты функционального программирования</h3>
+<ul>
+<li>
+<p>Есть три встроенных функции, которые очень удобно использовать в сочетании со списками: filter(), map() и reduce().</p>
+</li>
+<li>
+<p>Генераторы списков, словарей</p>
+</li>
+</ul>
+<h3>Полезные ссылки</h3>
+<ul>
+<li><a href="http://habrahabr.ru/post/128457/" rel="nofollow">статья на Хабре</a></li>
+<li><a href="http://pep8.ru/doc/tutorial-2.6/6.html" rel="nofollow">pep8.ru</a></li>
+<li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" rel="nofollow">Wiki</a></li>
+</ul>
+		 <div class="panel">
+                    <div class="panel-body">   
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-11-22T12:18:00+03:00"> 22 Ноябрь 2014</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="http://webquant.ru/category/python">python</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://webquant.ru/tag/python.html">python</a>
+        /
+	<a href="http://webquant.ru/tag/data-structures.html">data structures</a>
+        /
+	<a href="http://webquant.ru/tag/struktury-dannykh.html">структуры данных</a>
+        /
+	<a href="http://webquant.ru/tag/python-metody.html">python методы</a>
+        /
+	<a href="http://webquant.ru/tag/python-spisoki.html">python списоки</a>
+        /
+	<a href="http://webquant.ru/tag/slovari-python.html">словари python</a>
+        /
+	<a href="http://webquant.ru/tag/python-kortezh.html">python кортеж</a>
+    
+</footer><!-- /.post-info -->                  
+                    </div>
+                </div>
+		
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="http://webquant.ru/posts/nod-nok">Нахождение НОД и НОК.</a></li>
+        <li><a href="http://webquant.ru/posts/pelican">Pelican. Установка блога.</a></li>
+        <li><a href="http://webquant.ru/posts/go-parser">Парсер поисковых запросов, используя grab и firebug.</a></li>
+        <li><a href="http://webquant.ru/posts/pelican-extra">Pelican. Расширенные настройки блога.</a></li>
+        <li><a href="http://webquant.ru/posts/git">Используем Git для контроля версий.</a></li>
+    </ul>
+</section>
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'httpwebquantru'; // required: replace example with your forum shortname
+
+                var disqus_url = 'http://webquant.ru/posts/data-structures';
+
+            var disqus_config = function () {
+                this.language = "ru";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://github.com/achicha"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://webquant.ru/pages/pyalgo" target="_blank">
+                Алгоритмы и задачки.py
+            </a>
+        </li>
+      </ul>
+    </li>
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/trading-data">
+                            Где скачать исторические данные для акций?
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/ya-parser">
+                            Парсим поисковую выдачу Яндекса, Python + Grab.
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/go-parser">
+                            Парсер поисковых запросов, используя grab и firebug.
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/quicksort">
+                            Быстрая сортировка в Python (Quicksort, сортировка Хоара).
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://webquant.ru/posts/nod-nok">
+                            Нахождение НОД и НОК.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <noindex>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014
+            &middot; Powered by <a href="http://webquant.ru/" target="_blank">WebQuant</a>         </div>
+		
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+   </noindex>
+</footer>
+<script src="http://webquant.ru/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://webquant.ru/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://webquant.ru/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'httpwebquantru'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-53353786-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27168830 = new Ya.Metrika({id:27168830,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27168830" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
