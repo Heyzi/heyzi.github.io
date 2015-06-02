@@ -149,9 +149,14 @@ font-size:13px;
 }
 .MainContent{
   width: 77%;
- /* margin-left: 60px;
-  margin-right: 60px;*/
 }
+.nextpage{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} 
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
 	display: none;
