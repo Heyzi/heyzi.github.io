@@ -148,11 +148,13 @@ margin-top:-50px
   width: 66.66666667%;
 }
 /*убираем ссылки при печати*/
-a[href]:after {
-    content: " (" attr(href) ")";
-  }
+a:link:after, a:visited:after {  
+	display: none;
+	content: "";    
 }
+  
 }
+
 
 @media (max-width: 480px) { 
 .navbar-brand{
@@ -169,4 +171,4 @@ a[href]:after {
   font-family: "Open Sans", sans-serif;
 }
 
-
+}
