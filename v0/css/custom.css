@@ -169,7 +169,7 @@ font-size:13px;
   
 }
 div.skills * {
-    color: red;
+  padding: 0px;
 }
 
 /*убираем ссылки при печати*/
