@@ -144,11 +144,11 @@ margin-left: -8px;
 background-image: none
 margin-top:-50px
 }
-/*col-xs-12 {
+.col-xs-12 {
   width: 33.33333333%;
-}*/
+}
 .MainContent{
-  width: 76.66666667%;
+  width: 66.66666667%;
 }
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
