@@ -144,7 +144,14 @@ margin-left: -8px;
 background-image: none
 margin-top:-50px
 }
-
+.col-xs-12 {
+  width: 66.66666667%;
+}
+/*убираем ссылки при печати*/
+a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
 }
 
 @media (max-width: 480px) { 
@@ -161,5 +168,5 @@ margin-top:-50px
   display:none;
   font-family: "Open Sans", sans-serif;
 }
-}
+
 
