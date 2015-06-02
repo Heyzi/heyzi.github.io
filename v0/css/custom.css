@@ -152,9 +152,6 @@ font-size:13px;
  /* margin-left: 60px;
   margin-right: 60px;*/
 }
-#content{
-margin-top: -10px;
-}
 /*убираем ссылки при печати*/
 a:link:after, a:visited:after {  
 	display: none;
