@@ -18,6 +18,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #4e5359;
   background-color: #f3f3f5;
+  margin-top: 60px;
 }
 body::after {
   /* overlay layer visible on small devices when the right panel slides in */
@@ -47,7 +48,7 @@ body.cd-overlay::after {
 }
 
 a {
-  color: #a9c056;
+ 
   text-decoration: none;
 }
 
@@ -58,10 +59,8 @@ Main components
 -------------------------------- */
 header {
   position: relative;
-  height: 180px;
   line-height: 180px;
   text-align: center;
-  background-color: #a9c056;
 }
 header h1 {
   color: #ffffff;
@@ -72,7 +71,6 @@ header h1 {
 }
 @media only screen and (min-width: 1024px) {
   header {
-    height: 240px;
     line-height: 240px;
   }
   header h1 {
@@ -179,7 +177,7 @@ header h1 {
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #a9c056;
+
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
@@ -243,7 +241,7 @@ header h1 {
   .cd-faq-items {
     position: static;
     height: auto;
-    width: 78%;
+    width: 100%;
     float: right;
     overflow: visible;
     -webkit-transform: translateZ(0) translateX(0);
@@ -259,7 +257,7 @@ header h1 {
   .cd-faq-items {
     float: none;
     width: 100%;
-    padding-left: 220px;
+
   }
   .no-js .cd-faq-items {
     padding-left: 0;
