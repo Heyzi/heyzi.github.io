@@ -1,265 +1,170 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-	<!--[if IE]>
-	<script type="text/javascript">
-		window.location = "http://pingall.ru/print";
-	</script>
-	<![endif]-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- ===========================
-    THEME INFO
-    =========================== -->
-    <meta name="description" content="Just resume">
-    <meta name="keywords" content="resume, system, admin">
-    <meta name="author" content="Платонов Александр">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- ===========================
-    SITE TITLE
-    =========================== -->
-    <title>Платонов Александр</title>
-
-    <!-- ===========================
-    FAVICONS
-    =========================== -->
-    <link rel="icon" href="files/img/favicon.ico">
-    <!-- ===========================
-    FONTS & ICONS
-    =========================== -->
-    <link href='//fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- ===========================
-    STYLESHEETS
-    =========================== -->
-    <link rel="stylesheet" href="files/css/bootstrap.css">
-    <link rel="stylesheet" href="files/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="files/css/custom.css">
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="files/js/bootstrap.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Presentation Slideshow | CodyHouse</title>
 </head>
 <body>
-		<div class="container">
-			<!-- ===========================
-			navbar
-			============================ -->
-			<nav class="navbar navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<i class="navbar-brand marg1 navbar-spec fa fa-user hidden-xs"></i>
-						<a class="navbar-brand marg navbar-spec">Платонов Александр</a>
-						<i class="navbar-brand marg1 navbar-spec fa fa-desktop hidden-xs"></i>
-						<a class="navbar-brand marg navbar-spec hidden-xs "> Системное администрирование</a>
-						<i class="navbar-brand marg1 navbar-spec fa fa-file-o hidden-xs hidden-sm hidden-md"></i>
-						<a class="navbar-brand marg navbar-spec hidden-xs hidden-sm hidden-md"> WEB разработка</a>
-						<button type="button" onClick="window.print()"  class="printbtn btn btn-default navbar-btn hidden-print">Распечатать</button>
+	<div class="cd-slideshow-wrapper">
+		<nav class="cd-slideshow-nav">
+			<button class="cd-nav-trigger">
+				Open Nav
+				<span aria-hidden="true"></span>
+			</button>
+			
+			<div class="cd-nav-items">
+				<ol>
+					<li><a href="#slide-1">Slide 1</a></li>
+					<li>
+						<a href="#slide-2">Slide 2</a>
+						<ol class="sub-nav">
+							<li><a href="#slide-2">Slide 2 - Sub 1</a></li>
+							<li><a href="#slide-2">Slide 2 - Sub 2</a></li>
+							<li><a href="#slide-2">Slide 2 - Sub 3</a></li>
+						</ol>
+					</li>
+					<li><a href="#slide-3">Slide 3</a></li>
+					<li><a href="#slide-4">Slide 4</a></li>
+					<li><a href="#slide-5">Slide 5</a></li>
+					<li>
+						<a href="#slide-6">Slide 6</a>
+						<ol class="sub-nav">
+							<li><a href="#slide-6">Slide 6 - Sub 1</a></li>
+							<li><a href="#slide-6">Slide 6 - Sub 2</a></li>
+						</ol>
+					</li>
+				</ol>
+			</div> <!-- .cd-nav-items -->
+		</nav> <!-- .cd-slideshow-nav -->
+		
+		<ol class="cd-slideshow">
+			<li class="visible" id="slide-1">
+				<div class="cd-slider-content">
+					<div class="content-wrapper">
+						<h2>Presentation Slideshow</h2>
+						<p>A simple presentation template in CSS &amp; jQuery.</p>
+						<svg version="1.1" id="icon-keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="186px" height="60px" viewBox="0 0 186 60" enable-background="new 0 0 186 60" xml:space="preserve">
+						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M119,59H67c-1.10457,0-2-0.89543-2-2V36
+							c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C121,58.10457,120.10457,59,119,59z"/>
+						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M119,26H67c-1.10457,0-2-0.89543-2-2V3
+							c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C121,25.10457,120.10457,26,119,26z"/>
+						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M55,59H3c-1.10457,0-2-0.89543-2-2V36
+							c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C57,58.10457,56.10457,59,55,59z"/>
+						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M183,59h-52c-1.10457,0-2-0.89543-2-2V36
+							c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C185,58.10457,184.10457,59,183,59z"/>
+						<path fill="#FFFFFF" d="M92.54309,49.97196l-3.23061-7.26889C89.16552,42.37243,89.40755,42,89.76938,42h6.46124
+							c0.36182,0,0.60386,0.37243,0.4569,0.70307l-3.23061,7.26889C93.28094,50.36787,92.71906,50.36787,92.54309,49.97196z"/>
+						<path fill="#FFFFFF" d="M92.54309,10.02804l-3.23061,7.26889C89.16552,17.62757,89.40755,18,89.76938,18h6.46124
+							c0.36182,0,0.60386-0.37243,0.4569-0.70307l-3.23061-7.26889C93.28094,9.63213,92.71906,9.63213,92.54309,10.02804z"/>
+						<path fill="#FFFFFF" d="M25.02804,46.04309l7.26889-3.23062C32.62757,42.66552,33,42.90755,33,43.26938v6.46124
+							c0,0.36183-0.37243,0.60386-0.70307,0.45691l-7.26889-3.23062C24.63213,46.78095,24.63213,46.21905,25.02804,46.04309z"/>
+						<path fill="#FFFFFF" d="M160.97197,46.04309l-7.26891-3.23062C153.37242,42.66552,153,42.90755,153,43.26938v6.46124
+							c0,0.36183,0.37242,0.60386,0.70306,0.45691l7.26891-3.23062C161.36787,46.78095,161.36787,46.21905,160.97197,46.04309z"/>
+						</svg>
 					</div>
 				</div>
-			</nav>
-			<div class="clearfix"></div>
-		<!-- ===========================
-        Content
-        ============================ -->
-			<div id="content" class="row">
-				    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-					  <!--Sidebar content-->
-								<div id="contacts" class="info">
-									<img class="pofilepic hidden-print" src="https://pp.vk.me/c618827/v618827774/19b26/htp5L5QdLiA.jpg" alt="">
-										<div id="personal-info">								
-											<div class="each btn btn-default cbtn visible-print-block">
-												<i class="fa fa-user"></i>
-												<div class="info">Платонов</div>
-												<div class="info">Александр</div>
-												<div class="info">Андреевич</div>
-												<div class="clearfix"></div>
-											</div>
-											
-											<div id="contactf">
-												
-												<div class="each btn btn-default cbtn" href="#mapmodals" data-toggle="modal" role="button">
-													<i class="fa fa-map-marker"></i>
-													<div class="info">Гатчина</div>													
-												</div>
-												<div class="clearfix"></div>
-											</div>	
-											
-											<div class="each btn btn-default cbtn">
-												<i class="fa fa-phone-square"></i>
-												<div class="info"><a href="tel:+79218475171">+79218475171</a></div>
-												<div class="clearfix"></div>
-											</div>
-											
-											<div class="each btn btn-default cbtn hidden-print">
-												<i class="fa fa-envelope-o"></i>
-												<div class="info"><p><a href="mailto:planol@me.com">planol@me.com</a></p></div>
-												<div class="clearfix"></div>
-											</div>
-											
-											<div class="each btn btn-default cbtn hidden-print" >
-												<i class="fa fa-vk"></i>
-												<div class="info"><p> <a href="https://vk.com/planol.alex" target="_blank">Вконтакте</a></p></div>
-												<div class="clearfix"></div>
-											</div>
-											
-											<div class="each btn btn-default cbtn hidden-print" >
-												<i class="fa fa-pencil"></i>
-												<div class="info"><p> <a href="https://pingall.ru/blog" target="_blank">Небольшой блог</a></p></div>
-												<div class="clearfix"></div>
-											</div>
-										</div> 
-								</div>
+			</li>
+
+			<li id="slide-2">
+				<ol class="sub-slides">
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #2</h2>
 							</div>
-					<div class="MainContent col-xs-12 col-sm-8 col-md-5 col-lg-5 kostil">
-					  <!--Body content-->
-						<div class="head-col">
-												<a class="fa fa-book navbar-brand Btitle"></a>
-												<a class="navbar-brand ctitle">Обучение</a>
-												<div class="clearfix"></div>
 						</div>
-						<span class="label label-success">2015</span>
-						  <div class="ltarget">Сертификация</div>
-						  <div class="panel panel-default">
-								<div class="panel-heading">ZCNE Security Level 1</div>
-								<div class="panel-body">Северо-Западный региональный учебный центр ZyXEL в  НИУ ИТМО</div>
-						  </div>
-						<span class="label label-success">2014</span>
-						  <div class="ltarget">Сертификация</div>
-						  <div class="panel panel-default">
-								<div class="panel-heading">ZyXEL Certified Network Engineer (Специализация Ethernet)</div>
-								<div class="panel-body">Северо-Западный региональный учебный центр ZyXEL в  НИУ ИТМО</div>
-						  </div>
-						  
-						<span class="label label-success">2014 - 2016</span>
-						  <div class="ltarget">Магистратура</div>
-						  <div class="panel panel-default">
-								<div class="panel-heading">Специальность: Системное администрирование аппаратно-программных комплексов и сетей.</div>
-								<div class="panel-body">Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики</div>
-						  </div>
-						<span class="label label-success">2010 - 2014</span>
-						  <div class="ltarget">Бакалавриат</div>
-						  <div class="panel panel-default">
-								<div class="panel-heading">Специальность: Информатика и вычислительная техника.</div>
-								<div class="panel-body">Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики</div>
-						  </div>
-						<span class="label label-success hidden-print">1999 - 2010</span>
-						  <div class="ltarget hidden-print">Школа</div>
-						  <div class="panel panel-default hidden-print">
-								<div class="panel-heading hidden-print">Химико-технологический профиль</div>
-								<div class="panel-body hidden-print">Гатчинский лицей №3</div>
-						  </div>						  
-					
-					</div>
-					
-					<div class="col-sm-12 visible-print-block nextpage">
-					<div class="panel-heading">Продолжение на следующей странице</div>
-					</div>
-					
-					<div class="MainContent col-xs-12 col-sm-6 col-md-5 col-lg-5 printfixt2">
-					  <!--Body content-->
-											<div class="head-col">
-												<a class="fa fa-users navbar-brand Btitle"></a>
-												<a class="navbar-brand ctitle">Опыт работы</a>
-												<div class="clearfix"></div>
-											</div>
-										  <span class="label label-success">2015</span>
-										  <div class="ltarget">Freelance</div>
-										  <div class="panel panel-default">
-										  <div class="panel-heading">Freelance</div>
-										  <div class="panel-body">Создание сайтов-визиток. Ремонт компьютеров и ноутбуков, плашнетов, телефонов</div>
-										  </div>
-										  
-										  <span class="label label-success">Ноябрь 2013 - декабрь 2014</span>
-										  <div class="ltarget">Сервисный инженер</div>
-										  <div class="panel panel-default">
-										  <div class="panel-heading">Сервисный центр "ЮНИМ"</div>
-										  <div class="panel-body list-group">Ремонт различного рода техники: телефоны, ноутбуки, ПК, планшеты, роутеры. <br>Восстановление работоспособности различных ОС <br>Восстановление данных.  <br>Консультирование и обучение пользователей. <br>Удаление баннеров. </div>
-										  </div>
-										  
-										  <span class="label label-success">2011 - 2012</span>
-										  <div class="ltarget">Freelance</div>
-										  <div class="panel panel-default">
-										  <div class="panel-heading">Freelance</div>
-										  <div class="panel-body">Разработка сайтов визиток. Настройка удаленных серверов.</div>
-										  </div>
-					</div>
-					
-					<div class="clearfix"></div>
+					</li>
 
-										
-					<div class="MainContent col-xs-12 col-sm-6 col-md-12 col-lg-12 printfixt3">
-					  <!--Body content-->
-					  
-					  	<span class="label label-success ">Навыки</span>
-					<div class="skills">
-					<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-4 printfixt4">
-									<div class="each">
-										<div class="panel-body">Установка\настройка ОС</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">Знание железа ПК</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">Wordpress</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">jQuery/JavaScript</div>
-									</div>
-								</div>
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #2 - Sub #1</h2>
+							</div>
+						</div>
+					</li>
 
-								<div class="col-xs-12 col-sm-12 col-md-4 printfixt4">
-									<div class="each">
-										<div class="panel-body">AD\DNS\DHCP\RDP</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">Joomla</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">CSS</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">Photoshop</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-12 col-md-4 printfixt4">
-									<div class="each">
-										<div class="panel-body ">Восстановление данных</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">phpBB</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">HTML</div>
-									</div>
-									<div class="each">
-										<div class="panel-body">MySQL</div>
-										</div>
-								</div>
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #2 - Sub #2</h2>
 							</div>
-				</div> 
+						</div>
+					</li>
+
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #2 - Sub #3</h2>
+							</div>
+						</div>
+					</li>
+				</ol> <!-- .sub-slides -->
+			</li>
+
+			<li id="slide-3">
+				<div class="cd-slider-content">
+					<div class="content-wrapper">
+						<h2>Slider #3</h2>
 					</div>
-					<div class="clearfix visible-xs-block"></div>
-					<!-- Modal -->
-					  <div class="modal fade" id="mapmodals">
-						<div class="modal-dialog modal-lg">
-						  <div class="modal-content">
-							<div class="modal-body">
-							  <div id="map-container"></div>
+				</div>
+			</li>
+
+			<li id="slide-4">
+				<div class="cd-slider-content">
+					<div class="content-wrapper">
+						<h2>Slider #4</h2>
+					</div>
+				</div>
+			</li>
+
+			<li id="slide-5">
+				<div class="cd-slider-content">
+					<div class="content-wrapper">
+						<h2>Slider #5</h2>
+					</div>
+				</div>
+			</li>
+
+			<li id="slide-6">
+				<ol class="sub-slides">
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #6</h2>
 							</div>
-							<div class="modal-footer">
-							  <button type="button" class="btn btn-default navbar-btn hidden-print cbtn" data-dismiss="modal">Я понял где это :)</button>
+						</div>
+					</li>
+					
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #6 - Sub #1</h2>
 							</div>
-						  </div><!-- /.modal-content -->
-						</div><!-- /.modal-dialog -->
-					  </div><!-- /.modal -->
-			</div>
-		</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="cd-slider-content">
+							<div class="content-wrapper">
+								<h2>Slider #6 - Sub #2</h2>
+							</div>
+						</div>
+					</li>
+				</ol> <!-- .sub-slides -->
+			</li>
+		</ol> <!-- .cd-slideshow -->
+	</div> <!-- .cd-slideshow-wrapper -->
 	
-		<div class="clearfix"></div>
-		<script src="files/js/map.js"></script>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
