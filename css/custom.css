@@ -1,19 +1,15 @@
-.discrrab {
-text-align:left;
-font-weight: 200; 
-opacity: 1;
+.mytitle{
+	margin:15px;
 }
-.discrrab  p {
-font-weight: 200; 
-opacity: 1;
+h2{
+	margin: 35px;
 }
-.titilemargin{
- margin-top: 10vw;
+.mytext0{
+   text-align: left;
 }
-.pnumber{
- margin-top: 10vw;
+.mytext1{
+   text-align: left;
 }
-.maintext{
-	text-align: left;
-    margin-left: 45px;
+.mybot{
+   
 }
