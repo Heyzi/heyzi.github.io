@@ -1,212 +1,158 @@
-<!doctype html>
-<html lang="en" class="no-js">
+﻿<!DOCTYPE html>
+<html ng-app="MainModule">
+<!--[if IE 8 ]>    <html lang="ru" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <base href="/">
+    <meta name="fragment" content="!">
+    <meta name="description" content="Кого лайкает твой друг? Поиск лайков среди фотографий и на стене вконтакте. Поиск комментариев вконтакте. Список друзей со временем последнего посещения. Список удаленных друзей">
+    <meta name="keywords" content="поиск, комментарии, вконтакте,лайки,фото,друзья,онлайн,приложение,посещение,удаленный,статистика">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SearchLikes - Секреты ВК | Поиск лайков | Поиск комментариев | Статистика страницы ВК</title>
+    <link async href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic" rel='stylesheet'>
+    <link async href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <!--build:css(./) /assets/styles/ionicons/ionicons.css-->
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css"/>
+    <!--endbuild-->
 
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/bootstrap-theme.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/custom.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <!--build:css(./) /assets/styles/style.css-->
+    <link type="text/css" rel="stylesheet" href="styles/main/style.css">
+    <!--endbuild-->
 
-	<title>Анализ безопасности HTML5 | Платонов А.А.</title>
+    <!--build:css(./) /assets/styles/bootstrap.css-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="bower_components/ngtoast/dist/ngToast.css"/>
+    <!--endbuild-->
+
+    <!--build:css(./) /assets/styles/main.css-->
+    <link rel="stylesheet" href="styles/components.css"/>
+    <link rel="stylesheet" href="styles/gallery.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!--endbuild-->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"> </script><![endif]-->
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 </head>
-<body>
-	<div class="cd-slideshow-wrapper">
-		<nav class="cd-slideshow-nav">
-			<button class="cd-nav-trigger">
-				Навигация
-				<span aria-hidden="true"></span>
-			</button>
-			
-			<div class="cd-nav-items">
-				<ol>
-					<li><a href="#slide-1">Титульный лист</a></li>
-					<li><a href="#slide-2">Цель и задачи исследования</a></li>
-					<li><a href="#slide-3">Актуальность</a></li>
-					<li><a href="#slide-4">Актуальность2</a></li>
-					<li><a href="#slide-5">Актуальность3</a></li>
-					<li><a href="#slide-6">Актуальность4</a></li>
-					<li><a href="#slide-7">Slide 4</a></li>
-					<li><a href="#slide-8">Slide 5</a></li>
-					<li>
-						<a href="#slide-9">Slide 6</a>
-						<ol class="sub-nav">
-							<li><a href="#slide-9">Slide 6 - Sub 1</a></li>
-							<li><a href="#slide-9">Slide 6 - Sub 2</a></li>
-						</ol>
-					</li>
-				</ol>
-			</div> <!-- .cd-nav-items -->
-		</nav> <!-- .cd-slideshow-nav -->
-		
-		<ol class="cd-slideshow">
-			<li class="visible" id="slide-1">
-				<div class="cd-slider-content">
-					<div class="content-wrapper">
-						<div class="row">
-							<div class="container">
-								<div class="col-md-12 mytitle">Федеральное государственное автономное образовательное учреждение высшего образования </br> САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ <br> <h2>Анализ безопасности HTML5</h2><p>(Специальность: 09.04.01 - Системное администрирование аппаратно-программных комплексов и сетей)</p>
-										<br><br>	<svg version="1.1" id="icon-keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="186px" height="60px" viewBox="0 0 186 60" enable-background="new 0 0 186 60" xml:space="preserve">
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M119,59H67c-1.10457,0-2-0.89543-2-2V36
-										c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C121,58.10457,120.10457,59,119,59z"/>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M119,26H67c-1.10457,0-2-0.89543-2-2V3
-										c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C121,25.10457,120.10457,26,119,26z"/>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55,59H3c-1.10457,0-2-0.89543-2-2V36
-										c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C57,58.10457,56.10457,59,55,59z"/>
-									<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M183,59h-52c-1.10457,0-2-0.89543-2-2V36
-										c0-1.10457,0.89543-2,2-2h52c1.10457,0,2,0.89543,2,2v21C185,58.10457,184.10457,59,183,59z"/>
-									<path fill="#000000" d="M92.54309,49.97196l-3.23061-7.26889C89.16552,42.37243,89.40755,42,89.76938,42h6.46124
-										c0.36182,0,0.60386,0.37243,0.4569,0.70307l-3.23061,7.26889C93.28094,50.36787,92.71906,50.36787,92.54309,49.97196z"/>
-									<path fill="#000000" d="M92.54309,10.02804l-3.23061,7.26889C89.16552,17.62757,89.40755,18,89.76938,18h6.46124
-										c0.36182,0,0.60386-0.37243,0.4569-0.70307l-3.23061-7.26889C93.28094,9.63213,92.71906,9.63213,92.54309,10.02804z"/>
-									<path fill="#000000" d="M25.02804,46.04309l7.26889-3.23062C32.62757,42.66552,33,42.90755,33,43.26938v6.46124
-										c0,0.36183-0.37243,0.60386-0.70307,0.45691l-7.26889-3.23062C24.63213,46.78095,24.63213,46.21905,25.02804,46.04309z"/>
-									<path fill="#000000" d="M160.97197,46.04309l-7.26891-3.23062C153.37242,42.66552,153,42.90755,153,43.26938v6.46124
-										c0,0.36183,0.37242,0.60386,0.70306,0.45691l7.26891-3.23062C161.36787,46.78095,161.36787,46.21905,160.97197,46.04309z"/>
-									</svg></br></br></br></br></br></br>
-								
-								</div>
-								<div class="col-md-12 mytext0">
-								<h4><p>Выполнил: студент группы s4200</br>Платонов Александр</p></h4>
-								<h4><p>Научный руководитель:</br>Мартынов Владимир Павлович</p></h4>
-								</div>
-								<div class="col-md-12 mybot"><p></br></br></br></br></br></br>Санкт-Петербург, 2016 год</p></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
+<body ng-controller="MainController">
+<section>
+    <div ui-view></div>
+    <toast></toast>
+    <div style="text-align: center;" ><a href="/blog" style="text-decoration:none; font-size: 16px; color:white; padding:20px 0 0 0; cursor:pointer;" target="_blank">Перейти на блог</a></div>
 
-			<li id="slide-2">
-				<ol class="sub-slides">
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<div class="row">
-								<div class="container">
-									<div class="col-md-12 mytitle"><h2>Цель и задачи исследования</br></h2></div>
-									<div class="col-md-12 mytext1">
-														<h3>Цель исследования:</h3>				
-														Анализ проблем безопасности HTML5 и написание рекомендаций по их устранению или предотвращению
-														<h3>Задачи исследования:</h3>							
-														Определение основных проблем безопасности HTML5</br>
-														Проведение анализа этих проблем</br>
-														Написание рекомендаций</br>									</div>
-									<div class="col-md-12 mybot"><p></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>Страница 1</p></div>
-								</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ol> <!-- .sub-slides -->
-			</li>
+</section>
 
-			<li id="slide-3">
-				<ol class="sub-slides">
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<div class="row">
-								<div class="container">
-									<div class="col-md-12 mytitle"><h2>Актуальность 1/2</br></h2></div>
-									<div class="col-md-12 mytext1">
-									<img src="img\2page2.png" alt="2 page" height="100%" width="100%">
-									</div>
-									<div class="col-md-12 mybot"><p></br></br></br></br></br>Страница 2</p></div>
-								</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<div class="row">
-								<div class="container">
-									<div class="col-md-12 mytitle"><h2>Актуальность 2/2</br></h2></div>
-									<div class="col-md-12 mytext1">
-									<img src="img\2page.png" alt="2 page" height="80%" width="100%">
-									</div>
-									<div class="col-md-12 mybot"><p></br>Страница 3</p></div>
-								</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ol> <!-- .sub-slides -->			
-			</li>
-			<li id="slide-4">
-					<ol class="sub-slides">
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<div class="row">
-								<div class="container">
-									<div class="col-md-12 mytitle"><h2>Основные проблемы безопасности</br></h2></div>
-									<div class="col-md-12 mytext1">
-									<p>Межсайтовый скриптинг</p>
-									<p>Манипуляция хранилищем данных на стороне клиента</p>
-									<p>Ботнеты на основе браузера</p>
-									<p>Сканирование сети</p>
-									<p>Атаки с использованием векторной графики (SVG)</p>
-									<p>Внедрение кода через iframe и файлы изображений</p>
-									</div>
-									<div class="col-md-12 mybot"><p></br></br></br></br></br>Страница 4</p></div>
-								</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ol> <!-- .sub-slides -->		
-			</li>
+<div class="navigation-fixed">
+    <span class="button-top">Назад</span>
+    <span class="button-bottom">Вперед</span>
+</div><!-- .navigation-fixed -->
 
-			<li id="slide-5">
-				<div class="cd-slider-content">
-					<div class="content-wrapper">
-						<h2>Slider #5</h2>
-					</div>
-				</div>
-			</li>
+<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"> </script>-->
 
-			<li id="slide-6">
-				<ol class="sub-slides">
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<h2>Slider #6</h2>
-							</div>
-						</div>
-					</li>
-					
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<h2>Slider #6 - Sub #1</h2>
-							</div>
-						</div>
-					</li>
+<!--build:js(./) /assets/scripts/plugins.js-->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+<script type="text/javascript" src="bower_components/responsiveSlides.js/responsiveslides.min.js"></script>
+<!--endbuild-->
 
-					<li>
-						<div class="cd-slider-content">
-							<div class="content-wrapper">
-								<h2>Slider #6 - Sub #2</h2>
-							</div>
-						</div>
-					</li>
-				</ol> <!-- .sub-slides -->
-			</li>
-		</ol> <!-- .cd-slideshow -->
-	</div> <!-- .cd-slideshow-wrapper -->
-	
-<script src="js/jquery-2.2.3.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="js/bootstrap.js"></script> <!-- bootstrap -->
+<!--build:js(./) /assets/scripts/angular.js-->
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+<script type="text/javascript" src="bower_components/ng-table/dist/ng-table.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="bower_components/ngtoast/dist/ngToast.js"></script>
+
+<!--endbuild-->
+
+<!--build:js(./) /assets/scripts/mainPlugins.js-->
+
+<script src="bower_components/libs/scrollspy.js"> </script>
+<script src="bower_components/libs/easyResponsiveTabs.js"> </script>
+<!--endbuild-->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#html6-tab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+        });
+    });
+</script>
+
+<!--module-->
+<!--build:js(./) /app/src.js-->
+<script type="text/javascript" src="MainModule.js"></script>
+
+<!--services-->
+<script type="text/javascript" src="models/NotificationService.js"></script>
+<script type="text/javascript" src="models/LoaderService.js"></script>
+<script type="text/javascript" src="models/StaticsService.js"></script>
+
+<script type="text/javascript" src="components/friends/FriendsModule.js"></script>
+<script type="text/javascript" src="components/user/UserModule.js"></script>
+<script type="text/javascript" src="components/wall/WallModule.js"></script>
+<script type="text/javascript" src="components/userFriendsList/UserFriendsModule.js"></script>
+<script type="text/javascript" src="components/photo/PhotoModule.js"></script>
+<script type="text/javascript" src="components/selected/SelectedModule.js"></script>
+<script type="text/javascript" src="components/processingPhoto/ProcessingPhotoModule.js"></script>
+<script type="text/javascript" src="components/processingWall/ProcessingWallModule.js"></script>
+<script type="text/javascript" src="components/commentsPhoto/CommentsPhotoModule.js"></script>
+<script type="text/javascript" src="components/statisticFriends/StatisticsFriendsModule.js"></script>
+<script type="text/javascript" src="components/groups/GroupsUserModule.js"></script>
+<script type="text/javascript" src="components/groupContent/GroupContentModule.js"></script>
+<script type="text/javascript" src="components/migrations/MigrationsModule.js"></script>
+<script type="text/javascript" src="components/commentsGroup/CommentsGroupModule.js"></script>
+
+
+<!--models-->
+<script type="text/javascript" src="models/LocalStorageModel.js"></script>
+<script type="text/javascript" src="models/RestModelService.js"></script>
+<script type="text/javascript" src="models/UserModel.js"></script>
+
+<!--directives-->
+<script type="text/javascript" src="directives/ImageDirective.js"></script>
+<script type="text/javascript" src="directives/SliderDirective.js"></script>
+<script type="text/javascript" src="directives/MoveDirective.js"></script>
+<script type="text/javascript" src="directives/TabsDirective.js"></script>
+<script type="text/javascript" src="directives/CountAnimateDirective.js"></script>
+<!--<script type="text/javascript" src="directives/AdsDirective.js"></script>-->
+
+
+<!--controllers-->
+<script type="text/javascript" src="components/friends/controllers/FriendsController.js"></script>
+<script type="text/javascript" src="components/user/controllers/UserController.js"></script>
+<script type="text/javascript" src="components/wall/controllers/WallController.js"></script>
+<script type="text/javascript" src="components/userFriendsList/controllers/UserFriendsController.js"></script>
+<script type="text/javascript" src="components/photo/controllers/PhotoControllers.js"></script>
+<script type="text/javascript" src="components/selected/controllers/SelectedController.js"></script>
+<script type="text/javascript" src="components/processingPhoto/controllers/ProcessingPhotoController.js"></script>
+<script type="text/javascript" src="components/processingWall/controllers/ProcessingWallController.js"></script>
+<script type="text/javascript" src="components/commentsPhoto/controllers/CommentsPhotoController.js"></script>
+<script type="text/javascript" src="components/statisticFriends/controllers/StatisticsFriendsController.js"></script>
+<script type="text/javascript" src="components/groups/controllers/GroupsController.js"></script>
+<script type="text/javascript" src="components/groupContent/controllers/GroupContentController.js"></script>
+<script type="text/javascript" src="components/groupContent/controllers/PostWithLikesController.js"></script>
+<script type="text/javascript" src="components/migrations/controllers/MigrationsController.js"></script>
+<script type="text/javascript" src="components/migrations/controllers/GlobalStatController.js"></script>
+<script type="text/javascript" src="components/migrations/controllers/RelationsController.js"></script>
+<script type="text/javascript" src="components/commentsGroup/controllers/CommentsGroupController.js"></script>
+
+<script type="text/javascript" src="components/login/controllers/MainController.js"></script>
+
+<script type="text/javascript" src="config.js"></script>
+
+<!--endbuild-->
 </body>
 </html>
