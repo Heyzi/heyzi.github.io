@@ -1,6 +1,5 @@
 body{background:#f9f9f9;}
 #wrapper{padding:90px 15px;}
-.navbar-expand-lg .navbar-nav.side-nav{flex-direction: column;}
 .card{margin-bottom: 15px; border-radius:0; box-shadow: 0 3px 5px rgba(0,0,0,.1); }
 .header-top{box-shadow: 0 3px 5px rgba(0,0,0,.1)}
 .leftmenutrigger{display: none}
@@ -12,6 +11,6 @@ body{background:#f9f9f9;}
 }
 .animate{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 p {
-    margin-top: 0;
-    margin-bottom: 0rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
