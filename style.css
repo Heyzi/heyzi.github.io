@@ -11,3 +11,32 @@ body{background:#f9f9f9;}
 .navbar-nav.side-nav{background: #585f66;box-shadow: 2px 1px 2px rgba(0,0,0,.1);position:fixed;top:56px;flex-direction: column!important;left:-220px;width:200px;overflow-y:auto;bottom:0;overflow-x:hidden;padding-bottom:40px}
 }
 .animate{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+
+#A_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    height: 76.625px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    text-decoration: none solid rgb(0, 0, 0);
+    top: 0px;
+    width:200.344px;
+    column-rule-color: rgb(0, 0, 0);
+    perspective-origin: 156.172px 38.3125px;
+    transform-origin: 156.172px 38.3125px;
+    caret-color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255) url("https://d33wubrfki0l68.cloudfront.net/3bfba99b9b32c31cb9ef0d1d0c35ef38a5744587/4bfda/images/illustrations/borders.svg") no-repeat scroll 0% 0% / 100% 100% padding-box border-box;
+    border: 0px none rgb(0, 0, 0);
+    border-radius: 5px 5px 5px 5px;
+    font: normal normal 500 normal 17.856px / 32.1408px Quicksand, Arial, sans-serif;
+    grid-area: auto / 3 / auto / 9;
+    grid-column: 3 / 9;
+    margin: 17.856px;
+    outline: rgb(0, 0, 0) none 0px;
+    padding: 22.32px;
+    transition: background 0.15s linear 0s, color 0.15s linear 0s;
+}/*#A_1*/
