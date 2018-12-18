@@ -1,158 +1,175 @@
-﻿<!DOCTYPE html>
-<html ng-app="MainModule">
-<!--[if IE 8 ]>    <html lang="ru" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="ru" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+﻿<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<head>
-    <meta charset="utf-8">
-    <base href="/">
-    <meta name="fragment" content="!">
-    <meta name="description" content="Кого лайкает твой друг? Поиск лайков среди фотографий и на стене вконтакте. Поиск комментариев вконтакте. Список друзей со временем последнего посещения. Список удаленных друзей">
-    <meta name="keywords" content="поиск, комментарии, вконтакте,лайки,фото,друзья,онлайн,приложение,посещение,удаленный,статистика">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>SearchLikes - Секреты ВК | Поиск лайков | Поиск комментариев | Статистика страницы ВК</title>
-    <link async href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic" rel='stylesheet'>
-    <link async href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+body{background:#f9f9f9;}
+#wrapper{padding:90px 15px;}
+.navbar-expand-lg .navbar-nav.side-nav{flex-direction: column;}
+.card{margin-bottom: 15px; border-radius:0; box-shadow: 0 3px 5px rgba(0,0,0,.1); }
+.header-top{box-shadow: 0 3px 5px rgba(0,0,0,.1)}
+.leftmenutrigger{display: none}
+@media(min-width:992px) {
+.leftmenutrigger{display: block;display: block;margin: 7px 20px 4px 0;cursor: pointer;}
+#wrapper{padding: 90px 15px 15px 15px; }
+.navbar-nav.side-nav.open {left:0;}
+.navbar-nav.side-nav{background: #585f66;box-shadow: 2px 1px 2px rgba(0,0,0,.1);position:fixed;top:56px;flex-direction: column!important;left:-220px;width:200px;overflow-y:auto;bottom:0;overflow-x:hidden;padding-bottom:40px}
+}
+.animate{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 
-    <!--build:css(./) /assets/styles/ionicons/ionicons.css-->
-    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css"/>
-    <!--endbuild-->
-
-    <!--build:css(./) /assets/styles/style.css-->
-    <link type="text/css" rel="stylesheet" href="styles/main/style.css">
-    <!--endbuild-->
-
-    <!--build:css(./) /assets/styles/bootstrap.css-->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
-    <link rel="stylesheet" href="bower_components/ngtoast/dist/ngToast.css"/>
-    <!--endbuild-->
-
-    <!--build:css(./) /assets/styles/main.css-->
-    <link rel="stylesheet" href="styles/components.css"/>
-    <link rel="stylesheet" href="styles/gallery.css"/>
-    <link rel="stylesheet" href="styles/main.css"/>
-    <!--endbuild-->
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"> </script><![endif]-->
-    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-</head>
-<body ng-controller="MainController">
-<section>
-    <div ui-view></div>
-    <toast></toast>
-    <div style="text-align: center;" ><a href="/blog" style="text-decoration:none; font-size: 16px; color:white; padding:20px 0 0 0; cursor:pointer;" target="_blank">Перейти на блог</a></div>
-
-</section>
-
-<div class="navigation-fixed">
-    <span class="button-top">Назад</span>
-    <span class="button-bottom">Вперед</span>
-</div><!-- .navigation-fixed -->
-
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"> </script>-->
-
-<!--build:js(./) /assets/scripts/plugins.js-->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
-<script type="text/javascript" src="bower_components/responsiveSlides.js/responsiveslides.min.js"></script>
-<!--endbuild-->
-
-<!--build:js(./) /assets/scripts/angular.js-->
-<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
-<script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-google-chart/ng-google-chart.js"></script>
-<script type="text/javascript" src="bower_components/ng-table/dist/ng-table.js"></script>
-<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="bower_components/ngtoast/dist/ngToast.js"></script>
-
-<!--endbuild-->
-
-<!--build:js(./) /assets/scripts/mainPlugins.js-->
-
-<script src="bower_components/libs/scrollspy.js"> </script>
-<script src="bower_components/libs/easyResponsiveTabs.js"> </script>
-<!--endbuild-->
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#html6-tab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true, // 100% fit in a container
-        });
+$( document ).ready(function() {
+     $('.leftmenutrigger').on('click', function(e) {
+     $('.side-nav').toggleClass("open");
+     e.preventDefault();
     });
-</script>
+});
 
-<!--module-->
-<!--build:js(./) /app/src.js-->
-<script type="text/javascript" src="MainModule.js"></script>
-
-<!--services-->
-<script type="text/javascript" src="models/NotificationService.js"></script>
-<script type="text/javascript" src="models/LoaderService.js"></script>
-<script type="text/javascript" src="models/StaticsService.js"></script>
-
-<script type="text/javascript" src="components/friends/FriendsModule.js"></script>
-<script type="text/javascript" src="components/user/UserModule.js"></script>
-<script type="text/javascript" src="components/wall/WallModule.js"></script>
-<script type="text/javascript" src="components/userFriendsList/UserFriendsModule.js"></script>
-<script type="text/javascript" src="components/photo/PhotoModule.js"></script>
-<script type="text/javascript" src="components/selected/SelectedModule.js"></script>
-<script type="text/javascript" src="components/processingPhoto/ProcessingPhotoModule.js"></script>
-<script type="text/javascript" src="components/processingWall/ProcessingWallModule.js"></script>
-<script type="text/javascript" src="components/commentsPhoto/CommentsPhotoModule.js"></script>
-<script type="text/javascript" src="components/statisticFriends/StatisticsFriendsModule.js"></script>
-<script type="text/javascript" src="components/groups/GroupsUserModule.js"></script>
-<script type="text/javascript" src="components/groupContent/GroupContentModule.js"></script>
-<script type="text/javascript" src="components/migrations/MigrationsModule.js"></script>
-<script type="text/javascript" src="components/commentsGroup/CommentsGroupModule.js"></script>
-
-
-<!--models-->
-<script type="text/javascript" src="models/LocalStorageModel.js"></script>
-<script type="text/javascript" src="models/RestModelService.js"></script>
-<script type="text/javascript" src="models/UserModel.js"></script>
-
-<!--directives-->
-<script type="text/javascript" src="directives/ImageDirective.js"></script>
-<script type="text/javascript" src="directives/SliderDirective.js"></script>
-<script type="text/javascript" src="directives/MoveDirective.js"></script>
-<script type="text/javascript" src="directives/TabsDirective.js"></script>
-<script type="text/javascript" src="directives/CountAnimateDirective.js"></script>
-<!--<script type="text/javascript" src="directives/AdsDirective.js"></script>-->
-
-
-<!--controllers-->
-<script type="text/javascript" src="components/friends/controllers/FriendsController.js"></script>
-<script type="text/javascript" src="components/user/controllers/UserController.js"></script>
-<script type="text/javascript" src="components/wall/controllers/WallController.js"></script>
-<script type="text/javascript" src="components/userFriendsList/controllers/UserFriendsController.js"></script>
-<script type="text/javascript" src="components/photo/controllers/PhotoControllers.js"></script>
-<script type="text/javascript" src="components/selected/controllers/SelectedController.js"></script>
-<script type="text/javascript" src="components/processingPhoto/controllers/ProcessingPhotoController.js"></script>
-<script type="text/javascript" src="components/processingWall/controllers/ProcessingWallController.js"></script>
-<script type="text/javascript" src="components/commentsPhoto/controllers/CommentsPhotoController.js"></script>
-<script type="text/javascript" src="components/statisticFriends/controllers/StatisticsFriendsController.js"></script>
-<script type="text/javascript" src="components/groups/controllers/GroupsController.js"></script>
-<script type="text/javascript" src="components/groupContent/controllers/GroupContentController.js"></script>
-<script type="text/javascript" src="components/groupContent/controllers/PostWithLikesController.js"></script>
-<script type="text/javascript" src="components/migrations/controllers/MigrationsController.js"></script>
-<script type="text/javascript" src="components/migrations/controllers/GlobalStatController.js"></script>
-<script type="text/javascript" src="components/migrations/controllers/RelationsController.js"></script>
-<script type="text/javascript" src="components/commentsGroup/controllers/CommentsGroupController.js"></script>
-
-<script type="text/javascript" src="components/login/controllers/MainController.js"></script>
-
-<script type="text/javascript" src="config.js"></script>
-
-<!--endbuild-->
-</body>
-</html>
+  <div id="wrapper" class="animate">
+    <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+      <span class="navbar-toggler-icon leftmenutrigger"></span>
+      <a class="navbar-brand" href="#">LOGO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav animate side-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Side Menu Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-md-auto d-md-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Top Menu Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+          <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Try Other</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+              <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+              <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+              <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
